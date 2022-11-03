@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:parrot/feature/component/button.dart';
 import 'package:parrot/feature/component/failed_widget.dart';
 import 'package:parrot/feature/component/loading_indicator.dart';
@@ -9,6 +10,13 @@ import 'package:parrot/feature/input/input_state.dart';
 
 class InputScreen extends StatelessWidget {
   const InputScreen({super.key});
+
+  static MaterialPageRoute<bool> route() {
+    return MaterialPageRoute<bool>(
+      settings: const RouteSettings(name: 'input'),
+      builder: (context) => const InputScreen(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +29,10 @@ class InputScreen extends StatelessWidget {
 
         ref.listen(inputControllerProvider, (_, state) {
           state.savingUrlState.maybeWhen(
-            successful: (_) => _showSnackBar(context, 'Successfully saved'),
+            successful: (_) {
+              _showSnackBar(context, 'Successfully saved');
+              Navigator.of(context).pop(true);
+            },
             failed: (_) {
               _showSnackBar(context, 'Failed to save');
               ref.read(inputControllerProvider.notifier).resetSavingState();
