@@ -6,6 +6,7 @@ analyzer:
   errors:
     missing_required_param: warning
     missing_return: warning
+    avoid_web_libraries_in_flutter: ignore
     deprecated_member_use_from_same_package: ignore
     unnecessary_null_comparison: ignore
   language:
