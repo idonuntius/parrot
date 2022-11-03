@@ -1,9 +1,9 @@
 @JS()
 library chrome_api;
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:js/js.dart';
 import 'package:js/js_util.dart';
+import 'package:parrot/api/chrome/chrome_api.dart';
 import 'package:parrot/model/slack_webhook_url.dart';
 import 'package:parrot/model/tab_url.dart';
 
@@ -18,15 +18,6 @@ external Object _setSlackWebhookUrl(String url);
 
 @JS('removeSlackWebhookUrl')
 external Object _removeSlackWebhookUrl();
-
-final chromeApiProvider = Provider<ChromeApi>((_) => ChromeApiImpl());
-
-abstract class ChromeApi {
-  Future<TabUrl> getCurrentUrl();
-  Future<SlackWebhookUrl?> getSlackWebhookUrl();
-  Future<void> setSlackWebhookUrl(String url);
-  Future<void> removeSlackWebhookUrl();
-}
 
 class ChromeApiImpl implements ChromeApi {
   @override
