@@ -1,5 +1,3 @@
-const key = 'parrot_slack_webhook_url'
-
 async function getCurrentUrl() {
   let queryOptions = { active: true, currentWindow: true };
   let [tab] = await chrome.tabs.query(queryOptions);
@@ -7,14 +5,14 @@ async function getCurrentUrl() {
 }
 
 async function getSlackWebhookUrl() {
-  let result = await chrome.storage.local.get([key]);
-  return result.url;
+  let result = await chrome.storage.local.get(['parrot_slack_webhook_url']);
+  return result.parrot_slack_webhook_url;
 }
 
 async function setSlackWebhookUrl(url) {
-  await chrome.storage.local.set({ key: url });
+  await chrome.storage.local.set({ parrot_slack_webhook_url: url });
 }
 
 async function removeSlackWebhookUrl() {
-  await chrome.storage.local.remove(key);
+  await chrome.storage.local.remove('parrot_slack_webhook_url');
 }
