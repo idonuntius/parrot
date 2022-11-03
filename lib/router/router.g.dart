@@ -7,13 +7,17 @@ part of 'router.dart';
 // **************************************************************************
 
 List<GoRoute> get $appRoutes => [
-      $detailRoute,
+      $homeRoute,
     ];
 
-GoRoute get $detailRoute => GoRouteData.$route(
+GoRoute get $homeRoute => GoRouteData.$route(
       path: '/',
-      factory: $DetailRouteExtension._fromState,
+      factory: $HomeRouteExtension._fromState,
       routes: [
+        GoRouteData.$route(
+          path: 'detail',
+          factory: $DetailRouteExtension._fromState,
+        ),
         GoRouteData.$route(
           path: 'input',
           factory: $InputRouteExtension._fromState,
@@ -21,11 +25,23 @@ GoRoute get $detailRoute => GoRouteData.$route(
       ],
     );
 
+extension $HomeRouteExtension on HomeRoute {
+  static HomeRoute _fromState(GoRouterState state) => const HomeRoute();
+
+  String get location => GoRouteData.$location(
+        '/',
+      );
+
+  void go(BuildContext context) => context.go(location, extra: this);
+
+  void push(BuildContext context) => context.push(location, extra: this);
+}
+
 extension $DetailRouteExtension on DetailRoute {
   static DetailRoute _fromState(GoRouterState state) => const DetailRoute();
 
   String get location => GoRouteData.$location(
-        '/',
+        '/detail',
       );
 
   void go(BuildContext context) => context.go(location, extra: this);
