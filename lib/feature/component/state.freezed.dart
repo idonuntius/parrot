@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'input_getting_url_state.dart';
+part of 'state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,12 +15,12 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$InputGettingUrlState {
+mixin _$State<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() inProgress,
-    required TResult Function(SlackWebhookUrl? url) successful,
+    required TResult Function(T data) successful,
     required TResult Function(Exception e) failed,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$InputGettingUrlState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function()? inProgress,
-    TResult? Function(SlackWebhookUrl? url)? successful,
+    TResult? Function(T data)? successful,
     TResult? Function(Exception e)? failed,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,50 +36,48 @@ mixin _$InputGettingUrlState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? inProgress,
-    TResult Function(SlackWebhookUrl? url)? successful,
+    TResult Function(T data)? successful,
     TResult Function(Exception e)? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_InProgress value) inProgress,
-    required TResult Function(_Successful value) successful,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(_Init<T> value) init,
+    required TResult Function(_InProgress<T> value) inProgress,
+    required TResult Function(_Successful<T> value) successful,
+    required TResult Function(_Failed<T> value) failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_InProgress value)? inProgress,
-    TResult? Function(_Successful value)? successful,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Init<T> value)? init,
+    TResult? Function(_InProgress<T> value)? inProgress,
+    TResult? Function(_Successful<T> value)? successful,
+    TResult? Function(_Failed<T> value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_InProgress value)? inProgress,
-    TResult Function(_Successful value)? successful,
-    TResult Function(_Failed value)? failed,
+    TResult Function(_Init<T> value)? init,
+    TResult Function(_InProgress<T> value)? inProgress,
+    TResult Function(_Successful<T> value)? successful,
+    TResult Function(_Failed<T> value)? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InputGettingUrlStateCopyWith<$Res> {
-  factory $InputGettingUrlStateCopyWith(InputGettingUrlState value,
-          $Res Function(InputGettingUrlState) then) =
-      _$InputGettingUrlStateCopyWithImpl<$Res, InputGettingUrlState>;
+abstract class $StateCopyWith<T, $Res> {
+  factory $StateCopyWith(State<T> value, $Res Function(State<T>) then) =
+      _$StateCopyWithImpl<T, $Res, State<T>>;
 }
 
 /// @nodoc
-class _$InputGettingUrlStateCopyWithImpl<$Res,
-        $Val extends InputGettingUrlState>
-    implements $InputGettingUrlStateCopyWith<$Res> {
-  _$InputGettingUrlStateCopyWithImpl(this._value, this._then);
+class _$StateCopyWithImpl<T, $Res, $Val extends State<T>>
+    implements $StateCopyWith<T, $Res> {
+  _$StateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -88,33 +86,33 @@ class _$InputGettingUrlStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InitCopyWith<$Res> {
-  factory _$$_InitCopyWith(_$_Init value, $Res Function(_$_Init) then) =
-      __$$_InitCopyWithImpl<$Res>;
+abstract class _$$_InitCopyWith<T, $Res> {
+  factory _$$_InitCopyWith(_$_Init<T> value, $Res Function(_$_Init<T>) then) =
+      __$$_InitCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_InitCopyWithImpl<$Res>
-    extends _$InputGettingUrlStateCopyWithImpl<$Res, _$_Init>
-    implements _$$_InitCopyWith<$Res> {
-  __$$_InitCopyWithImpl(_$_Init _value, $Res Function(_$_Init) _then)
+class __$$_InitCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$_Init<T>>
+    implements _$$_InitCopyWith<T, $Res> {
+  __$$_InitCopyWithImpl(_$_Init<T> _value, $Res Function(_$_Init<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Init extends _Init {
+class _$_Init<T> extends _Init<T> {
   const _$_Init() : super._();
 
   @override
   String toString() {
-    return 'InputGettingUrlState.init()';
+    return 'State<$T>.init()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Init);
+        (other.runtimeType == runtimeType && other is _$_Init<T>);
   }
 
   @override
@@ -125,7 +123,7 @@ class _$_Init extends _Init {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() inProgress,
-    required TResult Function(SlackWebhookUrl? url) successful,
+    required TResult Function(T data) successful,
     required TResult Function(Exception e) failed,
   }) {
     return init();
@@ -136,7 +134,7 @@ class _$_Init extends _Init {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function()? inProgress,
-    TResult? Function(SlackWebhookUrl? url)? successful,
+    TResult? Function(T data)? successful,
     TResult? Function(Exception e)? failed,
   }) {
     return init?.call();
@@ -147,7 +145,7 @@ class _$_Init extends _Init {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? inProgress,
-    TResult Function(SlackWebhookUrl? url)? successful,
+    TResult Function(T data)? successful,
     TResult Function(Exception e)? failed,
     required TResult orElse(),
   }) {
@@ -160,10 +158,10 @@ class _$_Init extends _Init {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_InProgress value) inProgress,
-    required TResult Function(_Successful value) successful,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(_Init<T> value) init,
+    required TResult Function(_InProgress<T> value) inProgress,
+    required TResult Function(_Successful<T> value) successful,
+    required TResult Function(_Failed<T> value) failed,
   }) {
     return init(this);
   }
@@ -171,10 +169,10 @@ class _$_Init extends _Init {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_InProgress value)? inProgress,
-    TResult? Function(_Successful value)? successful,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Init<T> value)? init,
+    TResult? Function(_InProgress<T> value)? inProgress,
+    TResult? Function(_Successful<T> value)? successful,
+    TResult? Function(_Failed<T> value)? failed,
   }) {
     return init?.call(this);
   }
@@ -182,10 +180,10 @@ class _$_Init extends _Init {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_InProgress value)? inProgress,
-    TResult Function(_Successful value)? successful,
-    TResult Function(_Failed value)? failed,
+    TResult Function(_Init<T> value)? init,
+    TResult Function(_InProgress<T> value)? inProgress,
+    TResult Function(_Successful<T> value)? successful,
+    TResult Function(_Failed<T> value)? failed,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -195,41 +193,41 @@ class _$_Init extends _Init {
   }
 }
 
-abstract class _Init extends InputGettingUrlState {
-  const factory _Init() = _$_Init;
+abstract class _Init<T> extends State<T> {
+  const factory _Init() = _$_Init<T>;
   const _Init._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_InProgressCopyWith<$Res> {
+abstract class _$$_InProgressCopyWith<T, $Res> {
   factory _$$_InProgressCopyWith(
-          _$_InProgress value, $Res Function(_$_InProgress) then) =
-      __$$_InProgressCopyWithImpl<$Res>;
+          _$_InProgress<T> value, $Res Function(_$_InProgress<T>) then) =
+      __$$_InProgressCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_InProgressCopyWithImpl<$Res>
-    extends _$InputGettingUrlStateCopyWithImpl<$Res, _$_InProgress>
-    implements _$$_InProgressCopyWith<$Res> {
+class __$$_InProgressCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$_InProgress<T>>
+    implements _$$_InProgressCopyWith<T, $Res> {
   __$$_InProgressCopyWithImpl(
-      _$_InProgress _value, $Res Function(_$_InProgress) _then)
+      _$_InProgress<T> _value, $Res Function(_$_InProgress<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InProgress extends _InProgress {
+class _$_InProgress<T> extends _InProgress<T> {
   const _$_InProgress() : super._();
 
   @override
   String toString() {
-    return 'InputGettingUrlState.inProgress()';
+    return 'State<$T>.inProgress()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InProgress);
+        (other.runtimeType == runtimeType && other is _$_InProgress<T>);
   }
 
   @override
@@ -240,7 +238,7 @@ class _$_InProgress extends _InProgress {
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() inProgress,
-    required TResult Function(SlackWebhookUrl? url) successful,
+    required TResult Function(T data) successful,
     required TResult Function(Exception e) failed,
   }) {
     return inProgress();
@@ -251,7 +249,7 @@ class _$_InProgress extends _InProgress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function()? inProgress,
-    TResult? Function(SlackWebhookUrl? url)? successful,
+    TResult? Function(T data)? successful,
     TResult? Function(Exception e)? failed,
   }) {
     return inProgress?.call();
@@ -262,7 +260,7 @@ class _$_InProgress extends _InProgress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? inProgress,
-    TResult Function(SlackWebhookUrl? url)? successful,
+    TResult Function(T data)? successful,
     TResult Function(Exception e)? failed,
     required TResult orElse(),
   }) {
@@ -275,10 +273,10 @@ class _$_InProgress extends _InProgress {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_InProgress value) inProgress,
-    required TResult Function(_Successful value) successful,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(_Init<T> value) init,
+    required TResult Function(_InProgress<T> value) inProgress,
+    required TResult Function(_Successful<T> value) successful,
+    required TResult Function(_Failed<T> value) failed,
   }) {
     return inProgress(this);
   }
@@ -286,10 +284,10 @@ class _$_InProgress extends _InProgress {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_InProgress value)? inProgress,
-    TResult? Function(_Successful value)? successful,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Init<T> value)? init,
+    TResult? Function(_InProgress<T> value)? inProgress,
+    TResult? Function(_Successful<T> value)? successful,
+    TResult? Function(_Failed<T> value)? failed,
   }) {
     return inProgress?.call(this);
   }
@@ -297,10 +295,10 @@ class _$_InProgress extends _InProgress {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_InProgress value)? inProgress,
-    TResult Function(_Successful value)? successful,
-    TResult Function(_Failed value)? failed,
+    TResult Function(_Init<T> value)? init,
+    TResult Function(_InProgress<T> value)? inProgress,
+    TResult Function(_Successful<T> value)? successful,
+    TResult Function(_Failed<T> value)? failed,
     required TResult orElse(),
   }) {
     if (inProgress != null) {
@@ -310,95 +308,82 @@ class _$_InProgress extends _InProgress {
   }
 }
 
-abstract class _InProgress extends InputGettingUrlState {
-  const factory _InProgress() = _$_InProgress;
+abstract class _InProgress<T> extends State<T> {
+  const factory _InProgress() = _$_InProgress<T>;
   const _InProgress._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_SuccessfulCopyWith<$Res> {
+abstract class _$$_SuccessfulCopyWith<T, $Res> {
   factory _$$_SuccessfulCopyWith(
-          _$_Successful value, $Res Function(_$_Successful) then) =
-      __$$_SuccessfulCopyWithImpl<$Res>;
+          _$_Successful<T> value, $Res Function(_$_Successful<T>) then) =
+      __$$_SuccessfulCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({SlackWebhookUrl? url});
-
-  $SlackWebhookUrlCopyWith<$Res>? get url;
+  $Res call({T data});
 }
 
 /// @nodoc
-class __$$_SuccessfulCopyWithImpl<$Res>
-    extends _$InputGettingUrlStateCopyWithImpl<$Res, _$_Successful>
-    implements _$$_SuccessfulCopyWith<$Res> {
+class __$$_SuccessfulCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$_Successful<T>>
+    implements _$$_SuccessfulCopyWith<T, $Res> {
   __$$_SuccessfulCopyWithImpl(
-      _$_Successful _value, $Res Function(_$_Successful) _then)
+      _$_Successful<T> _value, $Res Function(_$_Successful<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = freezed,
+    Object? data = null,
   }) {
-    return _then(_$_Successful(
-      freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as SlackWebhookUrl?,
+    return _then(_$_Successful<T>(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $SlackWebhookUrlCopyWith<$Res>? get url {
-    if (_value.url == null) {
-      return null;
-    }
-
-    return $SlackWebhookUrlCopyWith<$Res>(_value.url!, (value) {
-      return _then(_value.copyWith(url: value));
-    });
   }
 }
 
 /// @nodoc
 
-class _$_Successful extends _Successful {
-  const _$_Successful(this.url) : super._();
+class _$_Successful<T> extends _Successful<T> {
+  const _$_Successful(this.data) : super._();
 
   @override
-  final SlackWebhookUrl? url;
+  final T data;
 
   @override
   String toString() {
-    return 'InputGettingUrlState.successful(url: $url)';
+    return 'State<$T>.successful(data: $data)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Successful &&
-            (identical(other.url, url) || other.url == url));
+            other is _$_Successful<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, url);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessfulCopyWith<_$_Successful> get copyWith =>
-      __$$_SuccessfulCopyWithImpl<_$_Successful>(this, _$identity);
+  _$$_SuccessfulCopyWith<T, _$_Successful<T>> get copyWith =>
+      __$$_SuccessfulCopyWithImpl<T, _$_Successful<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() inProgress,
-    required TResult Function(SlackWebhookUrl? url) successful,
+    required TResult Function(T data) successful,
     required TResult Function(Exception e) failed,
   }) {
-    return successful(url);
+    return successful(data);
   }
 
   @override
@@ -406,10 +391,10 @@ class _$_Successful extends _Successful {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function()? inProgress,
-    TResult? Function(SlackWebhookUrl? url)? successful,
+    TResult? Function(T data)? successful,
     TResult? Function(Exception e)? failed,
   }) {
-    return successful?.call(url);
+    return successful?.call(data);
   }
 
   @override
@@ -417,12 +402,12 @@ class _$_Successful extends _Successful {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? inProgress,
-    TResult Function(SlackWebhookUrl? url)? successful,
+    TResult Function(T data)? successful,
     TResult Function(Exception e)? failed,
     required TResult orElse(),
   }) {
     if (successful != null) {
-      return successful(url);
+      return successful(data);
     }
     return orElse();
   }
@@ -430,10 +415,10 @@ class _$_Successful extends _Successful {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_InProgress value) inProgress,
-    required TResult Function(_Successful value) successful,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(_Init<T> value) init,
+    required TResult Function(_InProgress<T> value) inProgress,
+    required TResult Function(_Successful<T> value) successful,
+    required TResult Function(_Failed<T> value) failed,
   }) {
     return successful(this);
   }
@@ -441,10 +426,10 @@ class _$_Successful extends _Successful {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_InProgress value)? inProgress,
-    TResult? Function(_Successful value)? successful,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Init<T> value)? init,
+    TResult? Function(_InProgress<T> value)? inProgress,
+    TResult? Function(_Successful<T> value)? successful,
+    TResult? Function(_Failed<T> value)? failed,
   }) {
     return successful?.call(this);
   }
@@ -452,10 +437,10 @@ class _$_Successful extends _Successful {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_InProgress value)? inProgress,
-    TResult Function(_Successful value)? successful,
-    TResult Function(_Failed value)? failed,
+    TResult Function(_Init<T> value)? init,
+    TResult Function(_InProgress<T> value)? inProgress,
+    TResult Function(_Successful<T> value)? successful,
+    TResult Function(_Failed<T> value)? failed,
     required TResult orElse(),
   }) {
     if (successful != null) {
@@ -465,29 +450,31 @@ class _$_Successful extends _Successful {
   }
 }
 
-abstract class _Successful extends InputGettingUrlState {
-  const factory _Successful(final SlackWebhookUrl? url) = _$_Successful;
+abstract class _Successful<T> extends State<T> {
+  const factory _Successful(final T data) = _$_Successful<T>;
   const _Successful._() : super._();
 
-  SlackWebhookUrl? get url;
+  T get data;
   @JsonKey(ignore: true)
-  _$$_SuccessfulCopyWith<_$_Successful> get copyWith =>
+  _$$_SuccessfulCopyWith<T, _$_Successful<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailedCopyWith<$Res> {
-  factory _$$_FailedCopyWith(_$_Failed value, $Res Function(_$_Failed) then) =
-      __$$_FailedCopyWithImpl<$Res>;
+abstract class _$$_FailedCopyWith<T, $Res> {
+  factory _$$_FailedCopyWith(
+          _$_Failed<T> value, $Res Function(_$_Failed<T>) then) =
+      __$$_FailedCopyWithImpl<T, $Res>;
   @useResult
   $Res call({Exception e});
 }
 
 /// @nodoc
-class __$$_FailedCopyWithImpl<$Res>
-    extends _$InputGettingUrlStateCopyWithImpl<$Res, _$_Failed>
-    implements _$$_FailedCopyWith<$Res> {
-  __$$_FailedCopyWithImpl(_$_Failed _value, $Res Function(_$_Failed) _then)
+class __$$_FailedCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$_Failed<T>>
+    implements _$$_FailedCopyWith<T, $Res> {
+  __$$_FailedCopyWithImpl(
+      _$_Failed<T> _value, $Res Function(_$_Failed<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -495,7 +482,7 @@ class __$$_FailedCopyWithImpl<$Res>
   $Res call({
     Object? e = null,
   }) {
-    return _then(_$_Failed(
+    return _then(_$_Failed<T>(
       null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
@@ -506,7 +493,7 @@ class __$$_FailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Failed extends _Failed {
+class _$_Failed<T> extends _Failed<T> {
   const _$_Failed(this.e) : super._();
 
   @override
@@ -514,14 +501,14 @@ class _$_Failed extends _Failed {
 
   @override
   String toString() {
-    return 'InputGettingUrlState.failed(e: $e)';
+    return 'State<$T>.failed(e: $e)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Failed &&
+            other is _$_Failed<T> &&
             (identical(other.e, e) || other.e == e));
   }
 
@@ -531,15 +518,15 @@ class _$_Failed extends _Failed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
-      __$$_FailedCopyWithImpl<_$_Failed>(this, _$identity);
+  _$$_FailedCopyWith<T, _$_Failed<T>> get copyWith =>
+      __$$_FailedCopyWithImpl<T, _$_Failed<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
     required TResult Function() inProgress,
-    required TResult Function(SlackWebhookUrl? url) successful,
+    required TResult Function(T data) successful,
     required TResult Function(Exception e) failed,
   }) {
     return failed(e);
@@ -550,7 +537,7 @@ class _$_Failed extends _Failed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
     TResult? Function()? inProgress,
-    TResult? Function(SlackWebhookUrl? url)? successful,
+    TResult? Function(T data)? successful,
     TResult? Function(Exception e)? failed,
   }) {
     return failed?.call(e);
@@ -561,7 +548,7 @@ class _$_Failed extends _Failed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
     TResult Function()? inProgress,
-    TResult Function(SlackWebhookUrl? url)? successful,
+    TResult Function(T data)? successful,
     TResult Function(Exception e)? failed,
     required TResult orElse(),
   }) {
@@ -574,10 +561,10 @@ class _$_Failed extends _Failed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_InProgress value) inProgress,
-    required TResult Function(_Successful value) successful,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(_Init<T> value) init,
+    required TResult Function(_InProgress<T> value) inProgress,
+    required TResult Function(_Successful<T> value) successful,
+    required TResult Function(_Failed<T> value) failed,
   }) {
     return failed(this);
   }
@@ -585,10 +572,10 @@ class _$_Failed extends _Failed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Init value)? init,
-    TResult? Function(_InProgress value)? inProgress,
-    TResult? Function(_Successful value)? successful,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(_Init<T> value)? init,
+    TResult? Function(_InProgress<T> value)? inProgress,
+    TResult? Function(_Successful<T> value)? successful,
+    TResult? Function(_Failed<T> value)? failed,
   }) {
     return failed?.call(this);
   }
@@ -596,10 +583,10 @@ class _$_Failed extends _Failed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_InProgress value)? inProgress,
-    TResult Function(_Successful value)? successful,
-    TResult Function(_Failed value)? failed,
+    TResult Function(_Init<T> value)? init,
+    TResult Function(_InProgress<T> value)? inProgress,
+    TResult Function(_Successful<T> value)? successful,
+    TResult Function(_Failed<T> value)? failed,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -609,12 +596,12 @@ class _$_Failed extends _Failed {
   }
 }
 
-abstract class _Failed extends InputGettingUrlState {
-  const factory _Failed(final Exception e) = _$_Failed;
+abstract class _Failed<T> extends State<T> {
+  const factory _Failed(final Exception e) = _$_Failed<T>;
   const _Failed._() : super._();
 
   Exception get e;
   @JsonKey(ignore: true)
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
+  _$$_FailedCopyWith<T, _$_Failed<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

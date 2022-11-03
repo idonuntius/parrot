@@ -16,9 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$InputState {
-  InputGettingUrlState get gettingUrlState =>
+  State<SlackWebhookUrl?> get gettingUrlState =>
       throw _privateConstructorUsedError;
-  InputSavingUrlState get savingUrlState => throw _privateConstructorUsedError;
+  State<void> get savingUrlState => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -33,12 +33,12 @@ abstract class $InputStateCopyWith<$Res> {
       _$InputStateCopyWithImpl<$Res, InputState>;
   @useResult
   $Res call(
-      {InputGettingUrlState gettingUrlState,
-      InputSavingUrlState savingUrlState,
+      {State<SlackWebhookUrl?> gettingUrlState,
+      State<void> savingUrlState,
       String url});
 
-  $InputGettingUrlStateCopyWith<$Res> get gettingUrlState;
-  $InputSavingUrlStateCopyWith<$Res> get savingUrlState;
+  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState;
+  $StateCopyWith<void, $Res> get savingUrlState;
 }
 
 /// @nodoc
@@ -62,11 +62,11 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
       gettingUrlState: null == gettingUrlState
           ? _value.gettingUrlState
           : gettingUrlState // ignore: cast_nullable_to_non_nullable
-              as InputGettingUrlState,
+              as State<SlackWebhookUrl?>,
       savingUrlState: null == savingUrlState
           ? _value.savingUrlState
           : savingUrlState // ignore: cast_nullable_to_non_nullable
-              as InputSavingUrlState,
+              as State<void>,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -76,16 +76,17 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
 
   @override
   @pragma('vm:prefer-inline')
-  $InputGettingUrlStateCopyWith<$Res> get gettingUrlState {
-    return $InputGettingUrlStateCopyWith<$Res>(_value.gettingUrlState, (value) {
+  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState {
+    return $StateCopyWith<SlackWebhookUrl?, $Res>(_value.gettingUrlState,
+        (value) {
       return _then(_value.copyWith(gettingUrlState: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InputSavingUrlStateCopyWith<$Res> get savingUrlState {
-    return $InputSavingUrlStateCopyWith<$Res>(_value.savingUrlState, (value) {
+  $StateCopyWith<void, $Res> get savingUrlState {
+    return $StateCopyWith<void, $Res>(_value.savingUrlState, (value) {
       return _then(_value.copyWith(savingUrlState: value) as $Val);
     });
   }
@@ -100,14 +101,14 @@ abstract class _$$_InputStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {InputGettingUrlState gettingUrlState,
-      InputSavingUrlState savingUrlState,
+      {State<SlackWebhookUrl?> gettingUrlState,
+      State<void> savingUrlState,
       String url});
 
   @override
-  $InputGettingUrlStateCopyWith<$Res> get gettingUrlState;
+  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState;
   @override
-  $InputSavingUrlStateCopyWith<$Res> get savingUrlState;
+  $StateCopyWith<void, $Res> get savingUrlState;
 }
 
 /// @nodoc
@@ -129,11 +130,11 @@ class __$$_InputStateCopyWithImpl<$Res>
       gettingUrlState: null == gettingUrlState
           ? _value.gettingUrlState
           : gettingUrlState // ignore: cast_nullable_to_non_nullable
-              as InputGettingUrlState,
+              as State<SlackWebhookUrl?>,
       savingUrlState: null == savingUrlState
           ? _value.savingUrlState
           : savingUrlState // ignore: cast_nullable_to_non_nullable
-              as InputSavingUrlState,
+              as State<void>,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -146,17 +147,17 @@ class __$$_InputStateCopyWithImpl<$Res>
 
 class _$_InputState extends _InputState {
   const _$_InputState(
-      {this.gettingUrlState = const InputGettingUrlState.init(),
-      this.savingUrlState = const InputSavingUrlState.init(),
+      {this.gettingUrlState = const State<SlackWebhookUrl?>.init(),
+      this.savingUrlState = const State<void>.init(),
       this.url = ''})
       : super._();
 
   @override
   @JsonKey()
-  final InputGettingUrlState gettingUrlState;
+  final State<SlackWebhookUrl?> gettingUrlState;
   @override
   @JsonKey()
-  final InputSavingUrlState savingUrlState;
+  final State<void> savingUrlState;
   @override
   @JsonKey()
   final String url;
@@ -191,15 +192,15 @@ class _$_InputState extends _InputState {
 
 abstract class _InputState extends InputState {
   const factory _InputState(
-      {final InputGettingUrlState gettingUrlState,
-      final InputSavingUrlState savingUrlState,
+      {final State<SlackWebhookUrl?> gettingUrlState,
+      final State<void> savingUrlState,
       final String url}) = _$_InputState;
   const _InputState._() : super._();
 
   @override
-  InputGettingUrlState get gettingUrlState;
+  State<SlackWebhookUrl?> get gettingUrlState;
   @override
-  InputSavingUrlState get savingUrlState;
+  State<void> get savingUrlState;
   @override
   String get url;
   @override

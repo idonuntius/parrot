@@ -1,8 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:parrot/api/chrome/chrome_api.dart';
 import 'package:parrot/api/provider.dart';
-import 'package:parrot/feature/input/input_getting_url_state.dart';
-import 'package:parrot/feature/input/input_saving_url_state.dart';
+import 'package:parrot/feature/component/state.dart';
 import 'package:parrot/feature/input/input_state.dart';
 
 final inputControllerProvider = StateNotifierProvider.autoDispose<InputController, InputState>(
@@ -21,7 +20,7 @@ class InputController extends StateNotifier<InputState> {
   }
 
   void resetSavingState() {
-    state = state.copyWith(savingUrlState: const InputSavingUrlState.init());
+    state = state.copyWith(savingUrlState: const State.init());
   }
 
   String? validate() {
@@ -36,11 +35,11 @@ class InputController extends StateNotifier<InputState> {
 
   Future<void> onSavingButtonTapped() async {
     try {
-      state = state.copyWith(savingUrlState: const InputSavingUrlState.inProgress());
+      state = state.copyWith(savingUrlState: const State.inProgress());
       await _chromeApi.setSlackWebhookUrl(state.url);
-      state = state.copyWith(savingUrlState: const InputSavingUrlState.successful());
+      state = state.copyWith(savingUrlState: const State.successful(null));
     } on Exception catch (e) {
-      state = state.copyWith(savingUrlState: InputSavingUrlState.failed(e));
+      state = state.copyWith(savingUrlState: State.failed(e));
     }
   }
 
@@ -48,14 +47,14 @@ class InputController extends StateNotifier<InputState> {
 
   Future<void> _load() async {
     try {
-      state = state.copyWith(gettingUrlState: const InputGettingUrlState.inProgress());
+      state = state.copyWith(gettingUrlState: const State.inProgress());
       final url = await _chromeApi.getSlackWebhookUrl();
       state = state.copyWith(
         url: url != null ? url.value : '',
-        gettingUrlState: InputGettingUrlState.successful(url),
+        gettingUrlState: State.successful(url),
       );
     } on Exception catch (e) {
-      state = state.copyWith(gettingUrlState: InputGettingUrlState.failed(e));
+      state = state.copyWith(gettingUrlState: State.failed(e));
     }
   }
 }

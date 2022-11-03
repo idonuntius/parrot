@@ -21,7 +21,7 @@ class InputScreen extends StatelessWidget {
 
         ref.listen(inputControllerProvider, (_, state) {
           state.savingUrlState.maybeWhen(
-            successful: () => _showSnackBar(context, 'Successfully saved'),
+            successful: (_) => _showSnackBar(context, 'Successfully saved'),
             failed: (_) {
               _showSnackBar(context, 'Failed to save');
               ref.read(inputControllerProvider.notifier).resetSavingState();
