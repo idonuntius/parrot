@@ -146,7 +146,7 @@ class __$$_InputStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_InputState extends _InputState {
-  const _$_InputState(
+  _$_InputState(
       {this.gettingUrlState = const State<SlackWebhookUrl?>.init(),
       this.savingUrlState = const State<void>.init(),
       this.url = ''})
@@ -191,11 +191,11 @@ class _$_InputState extends _InputState {
 }
 
 abstract class _InputState extends InputState {
-  const factory _InputState(
+  factory _InputState(
       {final State<SlackWebhookUrl?> gettingUrlState,
       final State<void> savingUrlState,
       final String url}) = _$_InputState;
-  const _InputState._() : super._();
+  _InputState._() : super._();
 
   @override
   State<SlackWebhookUrl?> get gettingUrlState;
