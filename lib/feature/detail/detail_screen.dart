@@ -10,6 +10,13 @@ import 'package:parrot/model/slack_webhook_url.dart';
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
 
+  static MaterialPageRoute<bool> route() {
+    return MaterialPageRoute<bool>(
+      settings: const RouteSettings(name: 'detail'),
+      builder: (context) => const DetailScreen(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

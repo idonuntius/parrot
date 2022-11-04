@@ -9,7 +9,7 @@ final inputControllerProvider = StateNotifierProvider.autoDispose<InputControlle
 );
 
 class InputController extends StateNotifier<InputState> {
-  InputController(this._chromeApi) : super(const InputState()) {
+  InputController(this._chromeApi) : super(InputState()) {
     _load();
   }
 
