@@ -1,5 +1,5 @@
 name: parrot
-description: A new Flutter project.
+description: Chrome extension to send the currently open URL to Slack
 publish_to: "none"
 version: 1.0.0+1
 
