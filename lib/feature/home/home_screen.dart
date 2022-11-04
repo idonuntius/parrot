@@ -3,12 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:parrot/feature/component/button.dart';
 import 'package:parrot/feature/component/failed_widget.dart';
 import 'package:parrot/feature/component/loading_indicator.dart';
+import 'package:parrot/feature/detail/detail_screen.dart';
 import 'package:parrot/feature/home/home_controller.dart';
 import 'package:parrot/feature/home/home_state.dart';
 import 'package:parrot/feature/input/input_screen.dart';
 import 'package:parrot/model/slack_webhook_url.dart';
 import 'package:parrot/model/tab_url.dart';
-import 'package:parrot/router/router.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -50,10 +50,14 @@ class _Successful extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(tabUrl.value),
+                Text(
+                  tabUrl.value,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 5,
+                ),
                 const SizedBox(height: 12),
                 Button(
-                  onPressed: () async {},
+                  onPressed: () => ref.read(homeControllerProvider.notifier).sendToUrl(),
                   child: const Text('Send'),
                 ),
               ],
@@ -65,7 +69,10 @@ class _Successful extends ConsumerWidget {
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: IconButton(
-              onPressed: () => const DetailRoute().go(context),
+              onPressed: () async {
+                await Navigator.of(context).push(DetailScreen.route());
+                ref.read(homeControllerProvider.notifier).retry();
+              },
               icon: const Icon(Icons.star),
             ),
           ),

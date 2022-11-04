@@ -16,4 +16,14 @@ class HomeGettingState with _$HomeGettingState {
   ) = _Successful;
   const factory HomeGettingState.slackWebhookUrlNotSaved() = _SlackWebhookUrlNotSaved;
   const factory HomeGettingState.failed(Exception exception) = _Failed;
+
+  SlackWebhookUrl? get slackWebhookUrl => maybeWhen(
+        successful: (slackWebhookUrl, _) => slackWebhookUrl,
+        orElse: () => null,
+      );
+
+  TabUrl? get tabUrl => maybeWhen(
+        successful: (_, tabUrl) => tabUrl,
+        orElse: () => null,
+      );
 }
