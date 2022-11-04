@@ -1,19 +1,25 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:parrot/api/chrome/chrome_api.dart';
 import 'package:parrot/api/provider.dart';
+import 'package:parrot/api/slack/slack_api.dart';
 import 'package:parrot/feature/component/state.dart';
 import 'package:parrot/feature/input/input_state.dart';
+import 'package:parrot/model/slack_webhook_url.dart';
 
 final inputControllerProvider = StateNotifierProvider.autoDispose<InputController, InputState>(
-  (ref) => InputController(ref.read(chromeApiProvider)),
+  (ref) => InputController(
+    ref.read(chromeApiProvider),
+    ref.read(slackApiProvider),
+  ),
 );
 
 class InputController extends StateNotifier<InputState> {
-  InputController(this._chromeApi) : super(InputState()) {
+  InputController(this._chromeApi, this._slackApi) : super(InputState()) {
     _load();
   }
 
   final ChromeApi _chromeApi;
+  final SlackApi _slackApi;
 
   void onUrlChanged(String value) {
     state = state.copyWith(url: value);
@@ -36,6 +42,11 @@ class InputController extends StateNotifier<InputState> {
   Future<void> onSavingButtonTapped() async {
     try {
       state = state.copyWith(savingUrlState: const State.inProgress());
+      final data = {'text': 'Sent from Chrome extension parrot.'};
+      await _slackApi.send(
+        SlackWebhookUrl(value: state.url),
+        data,
+      );
       await _chromeApi.setSlackWebhookUrl(state.url);
       state = state.copyWith(savingUrlState: const State.successful(null));
     } on Exception catch (e) {
