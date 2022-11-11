@@ -1,3 +1,8 @@
+.PHONY: setup
+setup:
+	flutter pub get
+	flutter pub run build_runner build --delete-conflicting-outputs
+
 .PHONY: build
 build:
 	flutter build web --web-renderer html --csp
