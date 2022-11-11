@@ -4,18 +4,11 @@ import 'package:parrot/feature/component/button.dart';
 import 'package:parrot/feature/component/failed_widget.dart';
 import 'package:parrot/feature/component/loading_indicator.dart';
 import 'package:parrot/feature/detail/detail_controller.dart';
-import 'package:parrot/feature/input/input_screen.dart';
+import 'package:parrot/feature/router/router.dart';
 import 'package:parrot/model/slack_webhook_url.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
-
-  static MaterialPageRoute<bool> route() {
-    return MaterialPageRoute<bool>(
-      settings: const RouteSettings(name: 'detail'),
-      builder: (context) => const DetailScreen(),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +47,7 @@ class _Successful extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Button(
-                    onPressed: () async {
-                      final result = await Navigator.of(context).push(InputScreen.route());
-                      if (result ?? false) {
-                        await ref.read(detailControllerProvider.notifier).retry();
-                      }
-                    },
+                    onPressed: () => const InputRouter().go(context),
                     child: const Text('Edit'),
                   ),
                   const SizedBox(width: 12),
@@ -79,12 +67,7 @@ class _Successful extends ConsumerWidget {
               const Text('Not entered.'),
               const SizedBox(height: 12),
               Button(
-                onPressed: () async {
-                  final result = await Navigator.of(context).push(InputScreen.route());
-                  if (result ?? false) {
-                    await ref.read(detailControllerProvider.notifier).retry();
-                  }
-                },
+                onPressed: () => const InputRouter().go(context),
                 child: const Text('Registration'),
               ),
             ]

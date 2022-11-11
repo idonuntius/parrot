@@ -10,13 +10,6 @@ import 'package:parrot/feature/input/input_state.dart';
 class InputScreen extends StatelessWidget {
   const InputScreen({super.key});
 
-  static MaterialPageRoute<bool> route() {
-    return MaterialPageRoute<bool>(
-      settings: const RouteSettings(name: 'input'),
-      builder: (context) => const InputScreen(),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

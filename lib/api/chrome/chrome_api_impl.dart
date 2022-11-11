@@ -4,6 +4,7 @@ library chrome_api;
 import 'package:js/js.dart';
 import 'package:js/js_util.dart';
 import 'package:parrot/api/chrome/chrome_api.dart';
+import 'package:parrot/common/store_stream_controller.dart';
 import 'package:parrot/model/slack_webhook_url.dart';
 import 'package:parrot/model/tab_url.dart';
 
@@ -19,7 +20,7 @@ external Object _setSlackWebhookUrl(String url);
 @JS('removeSlackWebhookUrl')
 external Object _removeSlackWebhookUrl();
 
-class ChromeApiImpl implements ChromeApi {
+class ChromeApiImpl extends ChromeApi {
   @override
   Future<TabUrl> getCurrentUrl() async {
     final url = await promiseToFuture<String>(_getCurrentUrl());
@@ -33,12 +34,14 @@ class ChromeApiImpl implements ChromeApi {
   }
 
   @override
-  Future<void> setSlackWebhookUrl(String url) {
-    return promiseToFuture(_setSlackWebhookUrl(url));
+  Future<void> setSlackWebhookUrl(String url) async {
+    await promiseToFuture<void>(_setSlackWebhookUrl(url));
+    return sink(StreamType.update);
   }
 
   @override
-  Future<void> removeSlackWebhookUrl() {
-    return promiseToFuture(_removeSlackWebhookUrl());
+  Future<void> removeSlackWebhookUrl() async {
+    await promiseToFuture<void>(_removeSlackWebhookUrl());
+    return sink(StreamType.update);
   }
 }
