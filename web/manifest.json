@@ -13,6 +13,9 @@
       "128": "./icons/icon16@8x.png"
     }
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self'"
+  },
   "permissions": [
     "storage",
     "tabs"
