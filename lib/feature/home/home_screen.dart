@@ -69,7 +69,7 @@ class _Successful extends ConsumerWidget {
             padding: const EdgeInsets.all(12),
             child: IconButton(
               onPressed: () => const DetailRouter().go(context),
-              icon: const Icon(Icons.star),
+              icon: const Icon(Icons.more_vert),
             ),
           ),
         ),
