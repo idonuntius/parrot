@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "parrot",
-  "description": "parrot",
+  "description": "Send the URL of the current tab to slack.",
   "version": "1.1.0",
   "action": {
     "default_title": "parrot",
