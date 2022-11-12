@@ -4,15 +4,19 @@ async function getCurrentUrl() {
   return tab.url;
 }
 
-async function getSlackWebhookUrl() {
-  let result = await chrome.storage.local.get(['parrot_slack_webhook_url']);
-  return result.parrot_slack_webhook_url;
+async function getSlackWebhookUrlPaths() {
+  let result = await chrome.storage.local.get(['parrot_slack_webhook_url_path1', 'parrot_slack_webhook_url_path2', 'parrot_slack_webhook_url_path3']);
+  if (result.parrot_slack_webhook_url_path1 === undefined || result.parrot_slack_webhook_url_path2 === undefined || result.parrot_slack_webhook_url_path3 == undefined) {
+    return null;
+  } else {
+    return [result.parrot_slack_webhook_url_path1, result.parrot_slack_webhook_url_path2, result.parrot_slack_webhook_url_path3];
+  }
 }
 
-async function setSlackWebhookUrl(url) {
-  await chrome.storage.local.set({ parrot_slack_webhook_url: url });
+async function setSlackWebhookUrlPaths(path1, path2, path3) {
+  await chrome.storage.local.set({ parrot_slack_webhook_url_path1: path1, parrot_slack_webhook_url_path2: path2, parrot_slack_webhook_url_path3: path3 });
 }
 
-async function removeSlackWebhookUrl() {
-  await chrome.storage.local.remove('parrot_slack_webhook_url');
+async function removeSlackWebhookUrlPaths() {
+  await chrome.storage.local.remove(['parrot_slack_webhook_url_path1', 'parrot_slack_webhook_url_path2', 'parrot_slack_webhook_url_path3']);
 }

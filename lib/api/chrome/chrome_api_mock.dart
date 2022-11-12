@@ -1,5 +1,5 @@
 import 'package:parrot/api/chrome/chrome_api.dart';
-import 'package:parrot/model/slack_webhook_url.dart';
+import 'package:parrot/model/slack_webhook_url_paths.dart';
 import 'package:parrot/model/tab_url.dart';
 
 class ChromeApiImpl extends ChromeApi {
@@ -9,17 +9,21 @@ class ChromeApiImpl extends ChromeApi {
   }
 
   @override
-  Future<SlackWebhookUrl?> getSlackWebhookUrl() async {
-    return const SlackWebhookUrl(value: 'url');
+  Future<SlackWebhookUrlPaths?> getSlackWebhookUrlPaths() async {
+    return const SlackWebhookUrlPaths(
+      path1: 'path1',
+      path2: 'path2',
+      path3: 'path3',
+    );
   }
 
   @override
-  Future<void> setSlackWebhookUrl(String url) {
+  Future<void> setSlackWebhookUrlPaths(String path1, String path2, String path3) {
     return Future.value();
   }
 
   @override
-  Future<void> removeSlackWebhookUrl() {
+  Future<void> removeSlackWebhookUrlPaths() {
     return Future.value();
   }
 }
