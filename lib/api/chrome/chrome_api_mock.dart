@@ -26,4 +26,19 @@ class ChromeApiImpl extends ChromeApi {
   Future<void> removeSlackWebhookUrlPaths() {
     return Future.value();
   }
+
+  @override
+  Future<bool> getIsRich() {
+    return Future.value(true);
+  }
+
+  @override
+  Future<void> setIsRich(bool value) {
+    return Future.value();
+  }
+
+  @override
+  Future<void> removeIsRich() {
+    return Future.value();
+  }
 }

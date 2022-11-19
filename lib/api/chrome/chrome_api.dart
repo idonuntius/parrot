@@ -7,4 +7,7 @@ abstract class ChromeApi with StoreStreamController {
   Future<SlackWebhookUrlPaths?> getSlackWebhookUrlPaths();
   Future<void> setSlackWebhookUrlPaths(String path1, String path2, String path3);
   Future<void> removeSlackWebhookUrlPaths();
+  Future<bool> getIsRich();
+  Future<void> setIsRich(bool value);
+  Future<void> removeIsRich();
 }

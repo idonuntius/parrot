@@ -20,6 +20,15 @@ external Object _setSlackWebhookUrlPaths(String path1, String path2, String path
 @JS('removeSlackWebhookUrlPaths')
 external Object _removeSlackWebhookUrlPaths();
 
+@JS('getIsRich')
+external Object _getIsRich();
+
+@JS('setIsRich')
+external Object _setIsRich(bool isRich);
+
+@JS('removeIsRich')
+external Object _removeIsRich();
+
 class ChromeApiImpl extends ChromeApi {
   @override
   Future<TabUrl> getCurrentUrl() async {
@@ -43,12 +52,28 @@ class ChromeApiImpl extends ChromeApi {
 
   @override
   Future<void> setSlackWebhookUrlPaths(String path1, String path2, String path3) async {
-    await promiseToFuture<void>(_setSlackWebhookUrlPaths(path1, path2, path3));
+    return promiseToFuture<void>(_setSlackWebhookUrlPaths(path1, path2, path3));
   }
 
   @override
   Future<void> removeSlackWebhookUrlPaths() async {
     await promiseToFuture<void>(_removeSlackWebhookUrlPaths());
     return sink(StreamType.update);
+  }
+
+  @override
+  Future<bool> getIsRich() async {
+    final isRich = await promiseToFuture<bool?>(_getIsRich());
+    return isRich ?? false;
+  }
+
+  @override
+  Future<void> setIsRich(bool value) {
+    return promiseToFuture<void>(_setIsRich(value));
+  }
+
+  @override
+  Future<void> removeIsRich() {
+    return promiseToFuture<void>(_removeIsRich());
   }
 }
