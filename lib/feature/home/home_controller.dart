@@ -7,12 +7,12 @@ import 'package:parrot/api/slack/slack_api.dart';
 import 'package:parrot/common/store_stream_controller.dart';
 import 'package:parrot/feature/home/home_getting_state.dart';
 import 'package:parrot/feature/home/home_state.dart';
-import 'package:parrot/usecase/get_slack_webhook_url_usecase.dart';
+import 'package:parrot/usecase/get_setting_info_usecase.dart';
 import 'package:parrot/usecase/save_slack_webhook_url_usecase.dart';
 
 final homeControllerProvider = StateNotifierProvider.autoDispose<HomeController, HomeState>(
   (ref) => HomeController(
-    ref.read(getSlackWebhookUrlUseCaseProvider),
+    ref.read(getSettingInfoUseCaseProvider),
     ref.read(saveSlackWebhookUrlUseCaseProvider),
     ref.read(chromeApiProvider),
     ref.read(slackApiProvider),
@@ -21,7 +21,7 @@ final homeControllerProvider = StateNotifierProvider.autoDispose<HomeController,
 
 class HomeController extends StateNotifier<HomeState> {
   HomeController(
-    this._getSlackWebhookUrlUseCase,
+    this._getSettingInfoUseCase,
     this._saveSlackWebhookUrlUseCase,
     this._chromeApi,
     this._slackApi,
@@ -31,7 +31,7 @@ class HomeController extends StateNotifier<HomeState> {
     _load();
   }
 
-  final GetSlackWebhookUrlUseCase _getSlackWebhookUrlUseCase;
+  final GetSettingInfoUseCase _getSettingInfoUseCase;
   final SaveSlackWebhookUrlUseCase _saveSlackWebhookUrlUseCase;
   final ChromeApi _chromeApi;
   final SlackApi _slackApi;
@@ -62,10 +62,10 @@ class HomeController extends StateNotifier<HomeState> {
   Future<void> _load() async {
     try {
       state = state.copyWith(gettingState: const HomeGettingState.inProgress());
-      final slackWebhookUrl = await _getSlackWebhookUrlUseCase();
-      if (slackWebhookUrl != null) {
+      final info = await _getSettingInfoUseCase();
+      if (info.slackWebhookUrl != null) {
         final tabUrl = await _chromeApi.getCurrentUrl();
-        state = state.copyWith(gettingState: HomeGettingState.successful(slackWebhookUrl, tabUrl));
+        state = state.copyWith(gettingState: HomeGettingState.successful(info.slackWebhookUrl!, tabUrl));
       } else {
         state = state.copyWith(gettingState: const HomeGettingState.slackWebhookUrlNotSaved());
       }

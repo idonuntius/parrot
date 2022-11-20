@@ -1,22 +1,25 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:parrot/feature/component/state.dart';
 import 'package:parrot/feature/input/input_state.dart';
-import 'package:parrot/usecase/get_slack_webhook_url_usecase.dart';
+import 'package:parrot/usecase/get_setting_info_usecase.dart';
 import 'package:parrot/usecase/save_slack_webhook_url_usecase.dart';
 
 final inputControllerProvider = StateNotifierProvider.autoDispose<InputController, InputState>(
   (ref) => InputController(
-    ref.read(getSlackWebhookUrlUseCaseProvider),
+    ref.read(getSettingInfoUseCaseProvider),
     ref.read(saveSlackWebhookUrlUseCaseProvider),
   ),
 );
 
 class InputController extends StateNotifier<InputState> {
-  InputController(this._getSlackWebhookUrlUseCase, this._saveSlackWebhookUrlUseCase) : super(InputState()) {
+  InputController(
+    this._getSettingInfoUseCase,
+    this._saveSlackWebhookUrlUseCase,
+  ) : super(InputState()) {
     _load();
   }
 
-  final GetSlackWebhookUrlUseCase _getSlackWebhookUrlUseCase;
+  final GetSettingInfoUseCase _getSettingInfoUseCase;
   final SaveSlackWebhookUrlUseCase _saveSlackWebhookUrlUseCase;
 
   void onUrlChanged(String value) {
@@ -52,10 +55,10 @@ class InputController extends StateNotifier<InputState> {
   Future<void> _load() async {
     try {
       state = state.copyWith(gettingUrlState: const State.inProgress());
-      final url = await _getSlackWebhookUrlUseCase();
+      final info = await _getSettingInfoUseCase();
       state = state.copyWith(
-        url: url != null ? url.value : '',
-        gettingUrlState: State.successful(url),
+        url: info.slackWebhookUrl != null ? info.slackWebhookUrl!.value : '',
+        gettingUrlState: State.successful(info.slackWebhookUrl),
       );
     } on Exception catch (e) {
       state = state.copyWith(gettingUrlState: State.failed(e));
