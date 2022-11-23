@@ -33,7 +33,7 @@ class InputScreen extends StatelessWidget {
           );
         });
 
-        return state.gettingUrlState.maybeWhen(
+        return state.gettingSettingInfoState.maybeWhen(
           successful: (_) => _Successful(state),
           failed: (_) => FailedWidget(
             retry: ref.read(inputControllerProvider.notifier).retry,

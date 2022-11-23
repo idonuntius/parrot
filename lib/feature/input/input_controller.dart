@@ -54,14 +54,14 @@ class InputController extends StateNotifier<InputState> {
 
   Future<void> _load() async {
     try {
-      state = state.copyWith(gettingUrlState: const State.inProgress());
+      state = state.copyWith(gettingSettingInfoState: const State.inProgress());
       final info = await _getSettingInfoUseCase();
       state = state.copyWith(
         url: info.slackWebhookUrl != null ? info.slackWebhookUrl!.value : '',
-        gettingUrlState: State.successful(info.slackWebhookUrl),
+        gettingSettingInfoState: State.successful(info),
       );
     } on Exception catch (e) {
-      state = state.copyWith(gettingUrlState: State.failed(e));
+      state = state.copyWith(gettingSettingInfoState: State.failed(e));
     }
   }
 }

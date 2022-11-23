@@ -16,9 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$InputState {
-  State<SlackWebhookUrl?> get gettingUrlState =>
+  State<SettingInfo> get gettingSettingInfoState =>
       throw _privateConstructorUsedError;
   State<void> get savingUrlState => throw _privateConstructorUsedError;
+  State<void> get savingIsRichState => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -33,12 +34,14 @@ abstract class $InputStateCopyWith<$Res> {
       _$InputStateCopyWithImpl<$Res, InputState>;
   @useResult
   $Res call(
-      {State<SlackWebhookUrl?> gettingUrlState,
+      {State<SettingInfo> gettingSettingInfoState,
       State<void> savingUrlState,
+      State<void> savingIsRichState,
       String url});
 
-  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState;
+  $StateCopyWith<SettingInfo, $Res> get gettingSettingInfoState;
   $StateCopyWith<void, $Res> get savingUrlState;
+  $StateCopyWith<void, $Res> get savingIsRichState;
 }
 
 /// @nodoc
@@ -54,18 +57,23 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gettingUrlState = null,
+    Object? gettingSettingInfoState = null,
     Object? savingUrlState = null,
+    Object? savingIsRichState = null,
     Object? url = null,
   }) {
     return _then(_value.copyWith(
-      gettingUrlState: null == gettingUrlState
-          ? _value.gettingUrlState
-          : gettingUrlState // ignore: cast_nullable_to_non_nullable
-              as State<SlackWebhookUrl?>,
+      gettingSettingInfoState: null == gettingSettingInfoState
+          ? _value.gettingSettingInfoState
+          : gettingSettingInfoState // ignore: cast_nullable_to_non_nullable
+              as State<SettingInfo>,
       savingUrlState: null == savingUrlState
           ? _value.savingUrlState
           : savingUrlState // ignore: cast_nullable_to_non_nullable
+              as State<void>,
+      savingIsRichState: null == savingIsRichState
+          ? _value.savingIsRichState
+          : savingIsRichState // ignore: cast_nullable_to_non_nullable
               as State<void>,
       url: null == url
           ? _value.url
@@ -76,10 +84,10 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
 
   @override
   @pragma('vm:prefer-inline')
-  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState {
-    return $StateCopyWith<SlackWebhookUrl?, $Res>(_value.gettingUrlState,
+  $StateCopyWith<SettingInfo, $Res> get gettingSettingInfoState {
+    return $StateCopyWith<SettingInfo, $Res>(_value.gettingSettingInfoState,
         (value) {
-      return _then(_value.copyWith(gettingUrlState: value) as $Val);
+      return _then(_value.copyWith(gettingSettingInfoState: value) as $Val);
     });
   }
 
@@ -88,6 +96,14 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
   $StateCopyWith<void, $Res> get savingUrlState {
     return $StateCopyWith<void, $Res>(_value.savingUrlState, (value) {
       return _then(_value.copyWith(savingUrlState: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $StateCopyWith<void, $Res> get savingIsRichState {
+    return $StateCopyWith<void, $Res>(_value.savingIsRichState, (value) {
+      return _then(_value.copyWith(savingIsRichState: value) as $Val);
     });
   }
 }
@@ -101,14 +117,17 @@ abstract class _$$_InputStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {State<SlackWebhookUrl?> gettingUrlState,
+      {State<SettingInfo> gettingSettingInfoState,
       State<void> savingUrlState,
+      State<void> savingIsRichState,
       String url});
 
   @override
-  $StateCopyWith<SlackWebhookUrl?, $Res> get gettingUrlState;
+  $StateCopyWith<SettingInfo, $Res> get gettingSettingInfoState;
   @override
   $StateCopyWith<void, $Res> get savingUrlState;
+  @override
+  $StateCopyWith<void, $Res> get savingIsRichState;
 }
 
 /// @nodoc
@@ -122,18 +141,23 @@ class __$$_InputStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gettingUrlState = null,
+    Object? gettingSettingInfoState = null,
     Object? savingUrlState = null,
+    Object? savingIsRichState = null,
     Object? url = null,
   }) {
     return _then(_$_InputState(
-      gettingUrlState: null == gettingUrlState
-          ? _value.gettingUrlState
-          : gettingUrlState // ignore: cast_nullable_to_non_nullable
-              as State<SlackWebhookUrl?>,
+      gettingSettingInfoState: null == gettingSettingInfoState
+          ? _value.gettingSettingInfoState
+          : gettingSettingInfoState // ignore: cast_nullable_to_non_nullable
+              as State<SettingInfo>,
       savingUrlState: null == savingUrlState
           ? _value.savingUrlState
           : savingUrlState // ignore: cast_nullable_to_non_nullable
+              as State<void>,
+      savingIsRichState: null == savingIsRichState
+          ? _value.savingIsRichState
+          : savingIsRichState // ignore: cast_nullable_to_non_nullable
               as State<void>,
       url: null == url
           ? _value.url
@@ -147,24 +171,28 @@ class __$$_InputStateCopyWithImpl<$Res>
 
 class _$_InputState extends _InputState {
   _$_InputState(
-      {this.gettingUrlState = const State<SlackWebhookUrl?>.init(),
+      {this.gettingSettingInfoState = const State<SlackWebhookUrl?>.init(),
       this.savingUrlState = const State<void>.init(),
+      this.savingIsRichState = const State<void>.init(),
       this.url = ''})
       : super._();
 
   @override
   @JsonKey()
-  final State<SlackWebhookUrl?> gettingUrlState;
+  final State<SettingInfo> gettingSettingInfoState;
   @override
   @JsonKey()
   final State<void> savingUrlState;
+  @override
+  @JsonKey()
+  final State<void> savingIsRichState;
   @override
   @JsonKey()
   final String url;
 
   @override
   String toString() {
-    return 'InputState(gettingUrlState: $gettingUrlState, savingUrlState: $savingUrlState, url: $url)';
+    return 'InputState(gettingSettingInfoState: $gettingSettingInfoState, savingUrlState: $savingUrlState, savingIsRichState: $savingIsRichState, url: $url)';
   }
 
   @override
@@ -172,16 +200,19 @@ class _$_InputState extends _InputState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_InputState &&
-            (identical(other.gettingUrlState, gettingUrlState) ||
-                other.gettingUrlState == gettingUrlState) &&
+            (identical(
+                    other.gettingSettingInfoState, gettingSettingInfoState) ||
+                other.gettingSettingInfoState == gettingSettingInfoState) &&
             (identical(other.savingUrlState, savingUrlState) ||
                 other.savingUrlState == savingUrlState) &&
+            (identical(other.savingIsRichState, savingIsRichState) ||
+                other.savingIsRichState == savingIsRichState) &&
             (identical(other.url, url) || other.url == url));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, gettingUrlState, savingUrlState, url);
+  int get hashCode => Object.hash(runtimeType, gettingSettingInfoState,
+      savingUrlState, savingIsRichState, url);
 
   @JsonKey(ignore: true)
   @override
@@ -192,15 +223,18 @@ class _$_InputState extends _InputState {
 
 abstract class _InputState extends InputState {
   factory _InputState(
-      {final State<SlackWebhookUrl?> gettingUrlState,
+      {final State<SettingInfo> gettingSettingInfoState,
       final State<void> savingUrlState,
+      final State<void> savingIsRichState,
       final String url}) = _$_InputState;
   _InputState._() : super._();
 
   @override
-  State<SlackWebhookUrl?> get gettingUrlState;
+  State<SettingInfo> get gettingSettingInfoState;
   @override
   State<void> get savingUrlState;
+  @override
+  State<void> get savingIsRichState;
   @override
   String get url;
   @override
