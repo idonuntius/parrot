@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'slack_webhook_url_paths.dart';
 
@@ -70,22 +70,22 @@ class _$SlackWebhookUrlPathsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SlackWebhookUrlPathsCopyWith<$Res>
+abstract class _$$SlackWebhookUrlPathsImplCopyWith<$Res>
     implements $SlackWebhookUrlPathsCopyWith<$Res> {
-  factory _$$_SlackWebhookUrlPathsCopyWith(_$_SlackWebhookUrlPaths value,
-          $Res Function(_$_SlackWebhookUrlPaths) then) =
-      __$$_SlackWebhookUrlPathsCopyWithImpl<$Res>;
+  factory _$$SlackWebhookUrlPathsImplCopyWith(_$SlackWebhookUrlPathsImpl value,
+          $Res Function(_$SlackWebhookUrlPathsImpl) then) =
+      __$$SlackWebhookUrlPathsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String path1, String path2, String path3});
 }
 
 /// @nodoc
-class __$$_SlackWebhookUrlPathsCopyWithImpl<$Res>
-    extends _$SlackWebhookUrlPathsCopyWithImpl<$Res, _$_SlackWebhookUrlPaths>
-    implements _$$_SlackWebhookUrlPathsCopyWith<$Res> {
-  __$$_SlackWebhookUrlPathsCopyWithImpl(_$_SlackWebhookUrlPaths _value,
-      $Res Function(_$_SlackWebhookUrlPaths) _then)
+class __$$SlackWebhookUrlPathsImplCopyWithImpl<$Res>
+    extends _$SlackWebhookUrlPathsCopyWithImpl<$Res, _$SlackWebhookUrlPathsImpl>
+    implements _$$SlackWebhookUrlPathsImplCopyWith<$Res> {
+  __$$SlackWebhookUrlPathsImplCopyWithImpl(_$SlackWebhookUrlPathsImpl _value,
+      $Res Function(_$SlackWebhookUrlPathsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +95,7 @@ class __$$_SlackWebhookUrlPathsCopyWithImpl<$Res>
     Object? path2 = null,
     Object? path3 = null,
   }) {
-    return _then(_$_SlackWebhookUrlPaths(
+    return _then(_$SlackWebhookUrlPathsImpl(
       path1: null == path1
           ? _value.path1
           : path1 // ignore: cast_nullable_to_non_nullable
@@ -114,8 +114,8 @@ class __$$_SlackWebhookUrlPathsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SlackWebhookUrlPaths extends _SlackWebhookUrlPaths {
-  const _$_SlackWebhookUrlPaths(
+class _$SlackWebhookUrlPathsImpl extends _SlackWebhookUrlPaths {
+  const _$SlackWebhookUrlPathsImpl(
       {required this.path1, required this.path2, required this.path3})
       : super._();
 
@@ -135,7 +135,7 @@ class _$_SlackWebhookUrlPaths extends _SlackWebhookUrlPaths {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SlackWebhookUrlPaths &&
+            other is _$SlackWebhookUrlPathsImpl &&
             (identical(other.path1, path1) || other.path1 == path1) &&
             (identical(other.path2, path2) || other.path2 == path2) &&
             (identical(other.path3, path3) || other.path3 == path3));
@@ -147,16 +147,17 @@ class _$_SlackWebhookUrlPaths extends _SlackWebhookUrlPaths {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SlackWebhookUrlPathsCopyWith<_$_SlackWebhookUrlPaths> get copyWith =>
-      __$$_SlackWebhookUrlPathsCopyWithImpl<_$_SlackWebhookUrlPaths>(
-          this, _$identity);
+  _$$SlackWebhookUrlPathsImplCopyWith<_$SlackWebhookUrlPathsImpl>
+      get copyWith =>
+          __$$SlackWebhookUrlPathsImplCopyWithImpl<_$SlackWebhookUrlPathsImpl>(
+              this, _$identity);
 }
 
 abstract class _SlackWebhookUrlPaths extends SlackWebhookUrlPaths {
   const factory _SlackWebhookUrlPaths(
       {required final String path1,
       required final String path2,
-      required final String path3}) = _$_SlackWebhookUrlPaths;
+      required final String path3}) = _$SlackWebhookUrlPathsImpl;
   const _SlackWebhookUrlPaths._() : super._();
 
   @override
@@ -167,6 +168,6 @@ abstract class _SlackWebhookUrlPaths extends SlackWebhookUrlPaths {
   String get path3;
   @override
   @JsonKey(ignore: true)
-  _$$_SlackWebhookUrlPathsCopyWith<_$_SlackWebhookUrlPaths> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SlackWebhookUrlPathsImplCopyWith<_$SlackWebhookUrlPathsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

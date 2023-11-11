@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'slack_webhook_url.dart';
 
@@ -57,22 +57,22 @@ class _$SlackWebhookUrlCopyWithImpl<$Res, $Val extends SlackWebhookUrl>
 }
 
 /// @nodoc
-abstract class _$$_SlackWebhookUrlCopyWith<$Res>
+abstract class _$$SlackWebhookUrlImplCopyWith<$Res>
     implements $SlackWebhookUrlCopyWith<$Res> {
-  factory _$$_SlackWebhookUrlCopyWith(
-          _$_SlackWebhookUrl value, $Res Function(_$_SlackWebhookUrl) then) =
-      __$$_SlackWebhookUrlCopyWithImpl<$Res>;
+  factory _$$SlackWebhookUrlImplCopyWith(_$SlackWebhookUrlImpl value,
+          $Res Function(_$SlackWebhookUrlImpl) then) =
+      __$$SlackWebhookUrlImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_SlackWebhookUrlCopyWithImpl<$Res>
-    extends _$SlackWebhookUrlCopyWithImpl<$Res, _$_SlackWebhookUrl>
-    implements _$$_SlackWebhookUrlCopyWith<$Res> {
-  __$$_SlackWebhookUrlCopyWithImpl(
-      _$_SlackWebhookUrl _value, $Res Function(_$_SlackWebhookUrl) _then)
+class __$$SlackWebhookUrlImplCopyWithImpl<$Res>
+    extends _$SlackWebhookUrlCopyWithImpl<$Res, _$SlackWebhookUrlImpl>
+    implements _$$SlackWebhookUrlImplCopyWith<$Res> {
+  __$$SlackWebhookUrlImplCopyWithImpl(
+      _$SlackWebhookUrlImpl _value, $Res Function(_$SlackWebhookUrlImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -80,7 +80,7 @@ class __$$_SlackWebhookUrlCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SlackWebhookUrl(
+    return _then(_$SlackWebhookUrlImpl(
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -91,8 +91,8 @@ class __$$_SlackWebhookUrlCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SlackWebhookUrl extends _SlackWebhookUrl {
-  const _$_SlackWebhookUrl({required this.value}) : super._();
+class _$SlackWebhookUrlImpl extends _SlackWebhookUrl {
+  const _$SlackWebhookUrlImpl({required this.value}) : super._();
 
   @override
   final String value;
@@ -106,7 +106,7 @@ class _$_SlackWebhookUrl extends _SlackWebhookUrl {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SlackWebhookUrl &&
+            other is _$SlackWebhookUrlImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -116,19 +116,20 @@ class _$_SlackWebhookUrl extends _SlackWebhookUrl {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SlackWebhookUrlCopyWith<_$_SlackWebhookUrl> get copyWith =>
-      __$$_SlackWebhookUrlCopyWithImpl<_$_SlackWebhookUrl>(this, _$identity);
+  _$$SlackWebhookUrlImplCopyWith<_$SlackWebhookUrlImpl> get copyWith =>
+      __$$SlackWebhookUrlImplCopyWithImpl<_$SlackWebhookUrlImpl>(
+          this, _$identity);
 }
 
 abstract class _SlackWebhookUrl extends SlackWebhookUrl {
   const factory _SlackWebhookUrl({required final String value}) =
-      _$_SlackWebhookUrl;
+      _$SlackWebhookUrlImpl;
   const _SlackWebhookUrl._() : super._();
 
   @override
   String get value;
   @override
   @JsonKey(ignore: true)
-  _$$_SlackWebhookUrlCopyWith<_$_SlackWebhookUrl> get copyWith =>
+  _$$SlackWebhookUrlImplCopyWith<_$SlackWebhookUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

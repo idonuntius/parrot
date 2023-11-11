@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
 
@@ -86,23 +86,25 @@ class _$StateCopyWithImpl<T, $Res, $Val extends State<T>>
 }
 
 /// @nodoc
-abstract class _$$_InitCopyWith<T, $Res> {
-  factory _$$_InitCopyWith(_$_Init<T> value, $Res Function(_$_Init<T>) then) =
-      __$$_InitCopyWithImpl<T, $Res>;
+abstract class _$$InitImplCopyWith<T, $Res> {
+  factory _$$InitImplCopyWith(
+          _$InitImpl<T> value, $Res Function(_$InitImpl<T>) then) =
+      __$$InitImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_InitCopyWithImpl<T, $Res>
-    extends _$StateCopyWithImpl<T, $Res, _$_Init<T>>
-    implements _$$_InitCopyWith<T, $Res> {
-  __$$_InitCopyWithImpl(_$_Init<T> _value, $Res Function(_$_Init<T>) _then)
+class __$$InitImplCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$InitImpl<T>>
+    implements _$$InitImplCopyWith<T, $Res> {
+  __$$InitImplCopyWithImpl(
+      _$InitImpl<T> _value, $Res Function(_$InitImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Init<T> extends _Init<T> {
-  const _$_Init() : super._();
+class _$InitImpl<T> extends _Init<T> {
+  const _$InitImpl() : super._();
 
   @override
   String toString() {
@@ -112,7 +114,7 @@ class _$_Init<T> extends _Init<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Init<T>);
+        (other.runtimeType == runtimeType && other is _$InitImpl<T>);
   }
 
   @override
@@ -194,30 +196,30 @@ class _$_Init<T> extends _Init<T> {
 }
 
 abstract class _Init<T> extends State<T> {
-  const factory _Init() = _$_Init<T>;
+  const factory _Init() = _$InitImpl<T>;
   const _Init._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_InProgressCopyWith<T, $Res> {
-  factory _$$_InProgressCopyWith(
-          _$_InProgress<T> value, $Res Function(_$_InProgress<T>) then) =
-      __$$_InProgressCopyWithImpl<T, $Res>;
+abstract class _$$InProgressImplCopyWith<T, $Res> {
+  factory _$$InProgressImplCopyWith(
+          _$InProgressImpl<T> value, $Res Function(_$InProgressImpl<T>) then) =
+      __$$InProgressImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_InProgressCopyWithImpl<T, $Res>
-    extends _$StateCopyWithImpl<T, $Res, _$_InProgress<T>>
-    implements _$$_InProgressCopyWith<T, $Res> {
-  __$$_InProgressCopyWithImpl(
-      _$_InProgress<T> _value, $Res Function(_$_InProgress<T>) _then)
+class __$$InProgressImplCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$InProgressImpl<T>>
+    implements _$$InProgressImplCopyWith<T, $Res> {
+  __$$InProgressImplCopyWithImpl(
+      _$InProgressImpl<T> _value, $Res Function(_$InProgressImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InProgress<T> extends _InProgress<T> {
-  const _$_InProgress() : super._();
+class _$InProgressImpl<T> extends _InProgress<T> {
+  const _$InProgressImpl() : super._();
 
   @override
   String toString() {
@@ -227,7 +229,7 @@ class _$_InProgress<T> extends _InProgress<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InProgress<T>);
+        (other.runtimeType == runtimeType && other is _$InProgressImpl<T>);
   }
 
   @override
@@ -309,34 +311,34 @@ class _$_InProgress<T> extends _InProgress<T> {
 }
 
 abstract class _InProgress<T> extends State<T> {
-  const factory _InProgress() = _$_InProgress<T>;
+  const factory _InProgress() = _$InProgressImpl<T>;
   const _InProgress._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_SuccessfulCopyWith<T, $Res> {
-  factory _$$_SuccessfulCopyWith(
-          _$_Successful<T> value, $Res Function(_$_Successful<T>) then) =
-      __$$_SuccessfulCopyWithImpl<T, $Res>;
+abstract class _$$SuccessfulImplCopyWith<T, $Res> {
+  factory _$$SuccessfulImplCopyWith(
+          _$SuccessfulImpl<T> value, $Res Function(_$SuccessfulImpl<T>) then) =
+      __$$SuccessfulImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$_SuccessfulCopyWithImpl<T, $Res>
-    extends _$StateCopyWithImpl<T, $Res, _$_Successful<T>>
-    implements _$$_SuccessfulCopyWith<T, $Res> {
-  __$$_SuccessfulCopyWithImpl(
-      _$_Successful<T> _value, $Res Function(_$_Successful<T>) _then)
+class __$$SuccessfulImplCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$SuccessfulImpl<T>>
+    implements _$$SuccessfulImplCopyWith<T, $Res> {
+  __$$SuccessfulImplCopyWithImpl(
+      _$SuccessfulImpl<T> _value, $Res Function(_$SuccessfulImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? data = freezed,
   }) {
-    return _then(_$_Successful<T>(
-      null == data
+    return _then(_$SuccessfulImpl<T>(
+      freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as T,
@@ -346,8 +348,8 @@ class __$$_SuccessfulCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_Successful<T> extends _Successful<T> {
-  const _$_Successful(this.data) : super._();
+class _$SuccessfulImpl<T> extends _Successful<T> {
+  const _$SuccessfulImpl(this.data) : super._();
 
   @override
   final T data;
@@ -361,7 +363,7 @@ class _$_Successful<T> extends _Successful<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Successful<T> &&
+            other is _$SuccessfulImpl<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -372,8 +374,8 @@ class _$_Successful<T> extends _Successful<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessfulCopyWith<T, _$_Successful<T>> get copyWith =>
-      __$$_SuccessfulCopyWithImpl<T, _$_Successful<T>>(this, _$identity);
+  _$$SuccessfulImplCopyWith<T, _$SuccessfulImpl<T>> get copyWith =>
+      __$$SuccessfulImplCopyWithImpl<T, _$SuccessfulImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -451,30 +453,30 @@ class _$_Successful<T> extends _Successful<T> {
 }
 
 abstract class _Successful<T> extends State<T> {
-  const factory _Successful(final T data) = _$_Successful<T>;
+  const factory _Successful(final T data) = _$SuccessfulImpl<T>;
   const _Successful._() : super._();
 
   T get data;
   @JsonKey(ignore: true)
-  _$$_SuccessfulCopyWith<T, _$_Successful<T>> get copyWith =>
+  _$$SuccessfulImplCopyWith<T, _$SuccessfulImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailedCopyWith<T, $Res> {
-  factory _$$_FailedCopyWith(
-          _$_Failed<T> value, $Res Function(_$_Failed<T>) then) =
-      __$$_FailedCopyWithImpl<T, $Res>;
+abstract class _$$FailedImplCopyWith<T, $Res> {
+  factory _$$FailedImplCopyWith(
+          _$FailedImpl<T> value, $Res Function(_$FailedImpl<T>) then) =
+      __$$FailedImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({Exception e});
 }
 
 /// @nodoc
-class __$$_FailedCopyWithImpl<T, $Res>
-    extends _$StateCopyWithImpl<T, $Res, _$_Failed<T>>
-    implements _$$_FailedCopyWith<T, $Res> {
-  __$$_FailedCopyWithImpl(
-      _$_Failed<T> _value, $Res Function(_$_Failed<T>) _then)
+class __$$FailedImplCopyWithImpl<T, $Res>
+    extends _$StateCopyWithImpl<T, $Res, _$FailedImpl<T>>
+    implements _$$FailedImplCopyWith<T, $Res> {
+  __$$FailedImplCopyWithImpl(
+      _$FailedImpl<T> _value, $Res Function(_$FailedImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -482,7 +484,7 @@ class __$$_FailedCopyWithImpl<T, $Res>
   $Res call({
     Object? e = null,
   }) {
-    return _then(_$_Failed<T>(
+    return _then(_$FailedImpl<T>(
       null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
@@ -493,8 +495,8 @@ class __$$_FailedCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_Failed<T> extends _Failed<T> {
-  const _$_Failed(this.e) : super._();
+class _$FailedImpl<T> extends _Failed<T> {
+  const _$FailedImpl(this.e) : super._();
 
   @override
   final Exception e;
@@ -508,7 +510,7 @@ class _$_Failed<T> extends _Failed<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Failed<T> &&
+            other is _$FailedImpl<T> &&
             (identical(other.e, e) || other.e == e));
   }
 
@@ -518,8 +520,8 @@ class _$_Failed<T> extends _Failed<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FailedCopyWith<T, _$_Failed<T>> get copyWith =>
-      __$$_FailedCopyWithImpl<T, _$_Failed<T>>(this, _$identity);
+  _$$FailedImplCopyWith<T, _$FailedImpl<T>> get copyWith =>
+      __$$FailedImplCopyWithImpl<T, _$FailedImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -597,11 +599,11 @@ class _$_Failed<T> extends _Failed<T> {
 }
 
 abstract class _Failed<T> extends State<T> {
-  const factory _Failed(final Exception e) = _$_Failed<T>;
+  const factory _Failed(final Exception e) = _$FailedImpl<T>;
   const _Failed._() : super._();
 
   Exception get e;
   @JsonKey(ignore: true)
-  _$$_FailedCopyWith<T, _$_Failed<T>> get copyWith =>
+  _$$FailedImplCopyWith<T, _$FailedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

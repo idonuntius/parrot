@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'setting_info.dart';
 
@@ -77,11 +77,11 @@ class _$SettingInfoCopyWithImpl<$Res, $Val extends SettingInfo>
 }
 
 /// @nodoc
-abstract class _$$_SettingInfoCopyWith<$Res>
+abstract class _$$SettingInfoImplCopyWith<$Res>
     implements $SettingInfoCopyWith<$Res> {
-  factory _$$_SettingInfoCopyWith(
-          _$_SettingInfo value, $Res Function(_$_SettingInfo) then) =
-      __$$_SettingInfoCopyWithImpl<$Res>;
+  factory _$$SettingInfoImplCopyWith(
+          _$SettingInfoImpl value, $Res Function(_$SettingInfoImpl) then) =
+      __$$SettingInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool isRich, SlackWebhookUrl? slackWebhookUrl});
@@ -91,11 +91,11 @@ abstract class _$$_SettingInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SettingInfoCopyWithImpl<$Res>
-    extends _$SettingInfoCopyWithImpl<$Res, _$_SettingInfo>
-    implements _$$_SettingInfoCopyWith<$Res> {
-  __$$_SettingInfoCopyWithImpl(
-      _$_SettingInfo _value, $Res Function(_$_SettingInfo) _then)
+class __$$SettingInfoImplCopyWithImpl<$Res>
+    extends _$SettingInfoCopyWithImpl<$Res, _$SettingInfoImpl>
+    implements _$$SettingInfoImplCopyWith<$Res> {
+  __$$SettingInfoImplCopyWithImpl(
+      _$SettingInfoImpl _value, $Res Function(_$SettingInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_SettingInfoCopyWithImpl<$Res>
     Object? isRich = null,
     Object? slackWebhookUrl = freezed,
   }) {
-    return _then(_$_SettingInfo(
+    return _then(_$SettingInfoImpl(
       isRich: null == isRich
           ? _value.isRich
           : isRich // ignore: cast_nullable_to_non_nullable
@@ -119,8 +119,8 @@ class __$$_SettingInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SettingInfo extends _SettingInfo {
-  const _$_SettingInfo({required this.isRich, this.slackWebhookUrl})
+class _$SettingInfoImpl extends _SettingInfo {
+  const _$SettingInfoImpl({required this.isRich, this.slackWebhookUrl})
       : super._();
 
   @override
@@ -137,7 +137,7 @@ class _$_SettingInfo extends _SettingInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SettingInfo &&
+            other is _$SettingInfoImpl &&
             (identical(other.isRich, isRich) || other.isRich == isRich) &&
             (identical(other.slackWebhookUrl, slackWebhookUrl) ||
                 other.slackWebhookUrl == slackWebhookUrl));
@@ -149,14 +149,14 @@ class _$_SettingInfo extends _SettingInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SettingInfoCopyWith<_$_SettingInfo> get copyWith =>
-      __$$_SettingInfoCopyWithImpl<_$_SettingInfo>(this, _$identity);
+  _$$SettingInfoImplCopyWith<_$SettingInfoImpl> get copyWith =>
+      __$$SettingInfoImplCopyWithImpl<_$SettingInfoImpl>(this, _$identity);
 }
 
 abstract class _SettingInfo extends SettingInfo {
   const factory _SettingInfo(
       {required final bool isRich,
-      final SlackWebhookUrl? slackWebhookUrl}) = _$_SettingInfo;
+      final SlackWebhookUrl? slackWebhookUrl}) = _$SettingInfoImpl;
   const _SettingInfo._() : super._();
 
   @override
@@ -165,6 +165,6 @@ abstract class _SettingInfo extends SettingInfo {
   SlackWebhookUrl? get slackWebhookUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_SettingInfoCopyWith<_$_SettingInfo> get copyWith =>
+  _$$SettingInfoImplCopyWith<_$SettingInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

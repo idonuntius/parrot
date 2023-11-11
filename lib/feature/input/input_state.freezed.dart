@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'input_state.dart';
 
@@ -109,11 +109,11 @@ class _$InputStateCopyWithImpl<$Res, $Val extends InputState>
 }
 
 /// @nodoc
-abstract class _$$_InputStateCopyWith<$Res>
+abstract class _$$InputStateImplCopyWith<$Res>
     implements $InputStateCopyWith<$Res> {
-  factory _$$_InputStateCopyWith(
-          _$_InputState value, $Res Function(_$_InputState) then) =
-      __$$_InputStateCopyWithImpl<$Res>;
+  factory _$$InputStateImplCopyWith(
+          _$InputStateImpl value, $Res Function(_$InputStateImpl) then) =
+      __$$InputStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_InputStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InputStateCopyWithImpl<$Res>
-    extends _$InputStateCopyWithImpl<$Res, _$_InputState>
-    implements _$$_InputStateCopyWith<$Res> {
-  __$$_InputStateCopyWithImpl(
-      _$_InputState _value, $Res Function(_$_InputState) _then)
+class __$$InputStateImplCopyWithImpl<$Res>
+    extends _$InputStateCopyWithImpl<$Res, _$InputStateImpl>
+    implements _$$InputStateImplCopyWith<$Res> {
+  __$$InputStateImplCopyWithImpl(
+      _$InputStateImpl _value, $Res Function(_$InputStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,7 +146,7 @@ class __$$_InputStateCopyWithImpl<$Res>
     Object? savingIsRichState = null,
     Object? url = null,
   }) {
-    return _then(_$_InputState(
+    return _then(_$InputStateImpl(
       gettingSettingInfoState: null == gettingSettingInfoState
           ? _value.gettingSettingInfoState
           : gettingSettingInfoState // ignore: cast_nullable_to_non_nullable
@@ -169,8 +169,8 @@ class __$$_InputStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InputState extends _InputState {
-  _$_InputState(
+class _$InputStateImpl extends _InputState {
+  _$InputStateImpl(
       {this.gettingSettingInfoState = const State<SlackWebhookUrl?>.init(),
       this.savingUrlState = const State<void>.init(),
       this.savingIsRichState = const State<void>.init(),
@@ -199,7 +199,7 @@ class _$_InputState extends _InputState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InputState &&
+            other is _$InputStateImpl &&
             (identical(
                     other.gettingSettingInfoState, gettingSettingInfoState) ||
                 other.gettingSettingInfoState == gettingSettingInfoState) &&
@@ -217,8 +217,8 @@ class _$_InputState extends _InputState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InputStateCopyWith<_$_InputState> get copyWith =>
-      __$$_InputStateCopyWithImpl<_$_InputState>(this, _$identity);
+  _$$InputStateImplCopyWith<_$InputStateImpl> get copyWith =>
+      __$$InputStateImplCopyWithImpl<_$InputStateImpl>(this, _$identity);
 }
 
 abstract class _InputState extends InputState {
@@ -226,7 +226,7 @@ abstract class _InputState extends InputState {
       {final State<SettingInfo> gettingSettingInfoState,
       final State<void> savingUrlState,
       final State<void> savingIsRichState,
-      final String url}) = _$_InputState;
+      final String url}) = _$InputStateImpl;
   _InputState._() : super._();
 
   @override
@@ -239,6 +239,6 @@ abstract class _InputState extends InputState {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_InputStateCopyWith<_$_InputState> get copyWith =>
+  _$$InputStateImplCopyWith<_$InputStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

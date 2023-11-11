@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'home_getting_state.dart';
 
@@ -97,23 +97,24 @@ class _$HomeGettingStateCopyWithImpl<$Res, $Val extends HomeGettingState>
 }
 
 /// @nodoc
-abstract class _$$_InitCopyWith<$Res> {
-  factory _$$_InitCopyWith(_$_Init value, $Res Function(_$_Init) then) =
-      __$$_InitCopyWithImpl<$Res>;
+abstract class _$$InitImplCopyWith<$Res> {
+  factory _$$InitImplCopyWith(
+          _$InitImpl value, $Res Function(_$InitImpl) then) =
+      __$$InitImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitCopyWithImpl<$Res>
-    extends _$HomeGettingStateCopyWithImpl<$Res, _$_Init>
-    implements _$$_InitCopyWith<$Res> {
-  __$$_InitCopyWithImpl(_$_Init _value, $Res Function(_$_Init) _then)
+class __$$InitImplCopyWithImpl<$Res>
+    extends _$HomeGettingStateCopyWithImpl<$Res, _$InitImpl>
+    implements _$$InitImplCopyWith<$Res> {
+  __$$InitImplCopyWithImpl(_$InitImpl _value, $Res Function(_$InitImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Init extends _Init {
-  const _$_Init() : super._();
+class _$InitImpl extends _Init {
+  const _$InitImpl() : super._();
 
   @override
   String toString() {
@@ -123,7 +124,7 @@ class _$_Init extends _Init {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Init);
+        (other.runtimeType == runtimeType && other is _$InitImpl);
   }
 
   @override
@@ -215,30 +216,30 @@ class _$_Init extends _Init {
 }
 
 abstract class _Init extends HomeGettingState {
-  const factory _Init() = _$_Init;
+  const factory _Init() = _$InitImpl;
   const _Init._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_InProgressCopyWith<$Res> {
-  factory _$$_InProgressCopyWith(
-          _$_InProgress value, $Res Function(_$_InProgress) then) =
-      __$$_InProgressCopyWithImpl<$Res>;
+abstract class _$$InProgressImplCopyWith<$Res> {
+  factory _$$InProgressImplCopyWith(
+          _$InProgressImpl value, $Res Function(_$InProgressImpl) then) =
+      __$$InProgressImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InProgressCopyWithImpl<$Res>
-    extends _$HomeGettingStateCopyWithImpl<$Res, _$_InProgress>
-    implements _$$_InProgressCopyWith<$Res> {
-  __$$_InProgressCopyWithImpl(
-      _$_InProgress _value, $Res Function(_$_InProgress) _then)
+class __$$InProgressImplCopyWithImpl<$Res>
+    extends _$HomeGettingStateCopyWithImpl<$Res, _$InProgressImpl>
+    implements _$$InProgressImplCopyWith<$Res> {
+  __$$InProgressImplCopyWithImpl(
+      _$InProgressImpl _value, $Res Function(_$InProgressImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InProgress extends _InProgress {
-  const _$_InProgress() : super._();
+class _$InProgressImpl extends _InProgress {
+  const _$InProgressImpl() : super._();
 
   @override
   String toString() {
@@ -248,7 +249,7 @@ class _$_InProgress extends _InProgress {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InProgress);
+        (other.runtimeType == runtimeType && other is _$InProgressImpl);
   }
 
   @override
@@ -340,15 +341,15 @@ class _$_InProgress extends _InProgress {
 }
 
 abstract class _InProgress extends HomeGettingState {
-  const factory _InProgress() = _$_InProgress;
+  const factory _InProgress() = _$InProgressImpl;
   const _InProgress._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_SuccessfulCopyWith<$Res> {
-  factory _$$_SuccessfulCopyWith(
-          _$_Successful value, $Res Function(_$_Successful) then) =
-      __$$_SuccessfulCopyWithImpl<$Res>;
+abstract class _$$SuccessfulImplCopyWith<$Res> {
+  factory _$$SuccessfulImplCopyWith(
+          _$SuccessfulImpl value, $Res Function(_$SuccessfulImpl) then) =
+      __$$SuccessfulImplCopyWithImpl<$Res>;
   @useResult
   $Res call({SlackWebhookUrl slackWebhookUrl, TabUrl tabUrl});
 
@@ -357,11 +358,11 @@ abstract class _$$_SuccessfulCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SuccessfulCopyWithImpl<$Res>
-    extends _$HomeGettingStateCopyWithImpl<$Res, _$_Successful>
-    implements _$$_SuccessfulCopyWith<$Res> {
-  __$$_SuccessfulCopyWithImpl(
-      _$_Successful _value, $Res Function(_$_Successful) _then)
+class __$$SuccessfulImplCopyWithImpl<$Res>
+    extends _$HomeGettingStateCopyWithImpl<$Res, _$SuccessfulImpl>
+    implements _$$SuccessfulImplCopyWith<$Res> {
+  __$$SuccessfulImplCopyWithImpl(
+      _$SuccessfulImpl _value, $Res Function(_$SuccessfulImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -370,7 +371,7 @@ class __$$_SuccessfulCopyWithImpl<$Res>
     Object? slackWebhookUrl = null,
     Object? tabUrl = null,
   }) {
-    return _then(_$_Successful(
+    return _then(_$SuccessfulImpl(
       null == slackWebhookUrl
           ? _value.slackWebhookUrl
           : slackWebhookUrl // ignore: cast_nullable_to_non_nullable
@@ -401,8 +402,8 @@ class __$$_SuccessfulCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Successful extends _Successful {
-  const _$_Successful(this.slackWebhookUrl, this.tabUrl) : super._();
+class _$SuccessfulImpl extends _Successful {
+  const _$SuccessfulImpl(this.slackWebhookUrl, this.tabUrl) : super._();
 
   @override
   final SlackWebhookUrl slackWebhookUrl;
@@ -418,7 +419,7 @@ class _$_Successful extends _Successful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Successful &&
+            other is _$SuccessfulImpl &&
             (identical(other.slackWebhookUrl, slackWebhookUrl) ||
                 other.slackWebhookUrl == slackWebhookUrl) &&
             (identical(other.tabUrl, tabUrl) || other.tabUrl == tabUrl));
@@ -430,8 +431,8 @@ class _$_Successful extends _Successful {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessfulCopyWith<_$_Successful> get copyWith =>
-      __$$_SuccessfulCopyWithImpl<_$_Successful>(this, _$identity);
+  _$$SuccessfulImplCopyWith<_$SuccessfulImpl> get copyWith =>
+      __$$SuccessfulImplCopyWithImpl<_$SuccessfulImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -521,36 +522,38 @@ class _$_Successful extends _Successful {
 abstract class _Successful extends HomeGettingState {
   const factory _Successful(
           final SlackWebhookUrl slackWebhookUrl, final TabUrl tabUrl) =
-      _$_Successful;
+      _$SuccessfulImpl;
   const _Successful._() : super._();
 
   SlackWebhookUrl get slackWebhookUrl;
   TabUrl get tabUrl;
   @JsonKey(ignore: true)
-  _$$_SuccessfulCopyWith<_$_Successful> get copyWith =>
+  _$$SuccessfulImplCopyWith<_$SuccessfulImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SlackWebhookUrlNotSavedCopyWith<$Res> {
-  factory _$$_SlackWebhookUrlNotSavedCopyWith(_$_SlackWebhookUrlNotSaved value,
-          $Res Function(_$_SlackWebhookUrlNotSaved) then) =
-      __$$_SlackWebhookUrlNotSavedCopyWithImpl<$Res>;
+abstract class _$$SlackWebhookUrlNotSavedImplCopyWith<$Res> {
+  factory _$$SlackWebhookUrlNotSavedImplCopyWith(
+          _$SlackWebhookUrlNotSavedImpl value,
+          $Res Function(_$SlackWebhookUrlNotSavedImpl) then) =
+      __$$SlackWebhookUrlNotSavedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SlackWebhookUrlNotSavedCopyWithImpl<$Res>
-    extends _$HomeGettingStateCopyWithImpl<$Res, _$_SlackWebhookUrlNotSaved>
-    implements _$$_SlackWebhookUrlNotSavedCopyWith<$Res> {
-  __$$_SlackWebhookUrlNotSavedCopyWithImpl(_$_SlackWebhookUrlNotSaved _value,
-      $Res Function(_$_SlackWebhookUrlNotSaved) _then)
+class __$$SlackWebhookUrlNotSavedImplCopyWithImpl<$Res>
+    extends _$HomeGettingStateCopyWithImpl<$Res, _$SlackWebhookUrlNotSavedImpl>
+    implements _$$SlackWebhookUrlNotSavedImplCopyWith<$Res> {
+  __$$SlackWebhookUrlNotSavedImplCopyWithImpl(
+      _$SlackWebhookUrlNotSavedImpl _value,
+      $Res Function(_$SlackWebhookUrlNotSavedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SlackWebhookUrlNotSaved extends _SlackWebhookUrlNotSaved {
-  const _$_SlackWebhookUrlNotSaved() : super._();
+class _$SlackWebhookUrlNotSavedImpl extends _SlackWebhookUrlNotSaved {
+  const _$SlackWebhookUrlNotSavedImpl() : super._();
 
   @override
   String toString() {
@@ -561,7 +564,7 @@ class _$_SlackWebhookUrlNotSaved extends _SlackWebhookUrlNotSaved {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SlackWebhookUrlNotSaved);
+            other is _$SlackWebhookUrlNotSavedImpl);
   }
 
   @override
@@ -653,23 +656,25 @@ class _$_SlackWebhookUrlNotSaved extends _SlackWebhookUrlNotSaved {
 }
 
 abstract class _SlackWebhookUrlNotSaved extends HomeGettingState {
-  const factory _SlackWebhookUrlNotSaved() = _$_SlackWebhookUrlNotSaved;
+  const factory _SlackWebhookUrlNotSaved() = _$SlackWebhookUrlNotSavedImpl;
   const _SlackWebhookUrlNotSaved._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_FailedCopyWith<$Res> {
-  factory _$$_FailedCopyWith(_$_Failed value, $Res Function(_$_Failed) then) =
-      __$$_FailedCopyWithImpl<$Res>;
+abstract class _$$FailedImplCopyWith<$Res> {
+  factory _$$FailedImplCopyWith(
+          _$FailedImpl value, $Res Function(_$FailedImpl) then) =
+      __$$FailedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Exception exception});
 }
 
 /// @nodoc
-class __$$_FailedCopyWithImpl<$Res>
-    extends _$HomeGettingStateCopyWithImpl<$Res, _$_Failed>
-    implements _$$_FailedCopyWith<$Res> {
-  __$$_FailedCopyWithImpl(_$_Failed _value, $Res Function(_$_Failed) _then)
+class __$$FailedImplCopyWithImpl<$Res>
+    extends _$HomeGettingStateCopyWithImpl<$Res, _$FailedImpl>
+    implements _$$FailedImplCopyWith<$Res> {
+  __$$FailedImplCopyWithImpl(
+      _$FailedImpl _value, $Res Function(_$FailedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -677,7 +682,7 @@ class __$$_FailedCopyWithImpl<$Res>
   $Res call({
     Object? exception = null,
   }) {
-    return _then(_$_Failed(
+    return _then(_$FailedImpl(
       null == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
@@ -688,8 +693,8 @@ class __$$_FailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Failed extends _Failed {
-  const _$_Failed(this.exception) : super._();
+class _$FailedImpl extends _Failed {
+  const _$FailedImpl(this.exception) : super._();
 
   @override
   final Exception exception;
@@ -703,7 +708,7 @@ class _$_Failed extends _Failed {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Failed &&
+            other is _$FailedImpl &&
             (identical(other.exception, exception) ||
                 other.exception == exception));
   }
@@ -714,8 +719,8 @@ class _$_Failed extends _Failed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
-      __$$_FailedCopyWithImpl<_$_Failed>(this, _$identity);
+  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
+      __$$FailedImplCopyWithImpl<_$FailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -803,11 +808,11 @@ class _$_Failed extends _Failed {
 }
 
 abstract class _Failed extends HomeGettingState {
-  const factory _Failed(final Exception exception) = _$_Failed;
+  const factory _Failed(final Exception exception) = _$FailedImpl;
   const _Failed._() : super._();
 
   Exception get exception;
   @JsonKey(ignore: true)
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
+  _$$FailedImplCopyWith<_$FailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

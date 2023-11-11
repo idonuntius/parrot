@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tab_url.dart';
 
@@ -55,19 +55,21 @@ class _$TabUrlCopyWithImpl<$Res, $Val extends TabUrl>
 }
 
 /// @nodoc
-abstract class _$$_TabUrlCopyWith<$Res> implements $TabUrlCopyWith<$Res> {
-  factory _$$_TabUrlCopyWith(_$_TabUrl value, $Res Function(_$_TabUrl) then) =
-      __$$_TabUrlCopyWithImpl<$Res>;
+abstract class _$$TabUrlImplCopyWith<$Res> implements $TabUrlCopyWith<$Res> {
+  factory _$$TabUrlImplCopyWith(
+          _$TabUrlImpl value, $Res Function(_$TabUrlImpl) then) =
+      __$$TabUrlImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_TabUrlCopyWithImpl<$Res>
-    extends _$TabUrlCopyWithImpl<$Res, _$_TabUrl>
-    implements _$$_TabUrlCopyWith<$Res> {
-  __$$_TabUrlCopyWithImpl(_$_TabUrl _value, $Res Function(_$_TabUrl) _then)
+class __$$TabUrlImplCopyWithImpl<$Res>
+    extends _$TabUrlCopyWithImpl<$Res, _$TabUrlImpl>
+    implements _$$TabUrlImplCopyWith<$Res> {
+  __$$TabUrlImplCopyWithImpl(
+      _$TabUrlImpl _value, $Res Function(_$TabUrlImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -75,7 +77,7 @@ class __$$_TabUrlCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_TabUrl(
+    return _then(_$TabUrlImpl(
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -86,8 +88,8 @@ class __$$_TabUrlCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TabUrl extends _TabUrl {
-  const _$_TabUrl({required this.value}) : super._();
+class _$TabUrlImpl extends _TabUrl {
+  const _$TabUrlImpl({required this.value}) : super._();
 
   @override
   final String value;
@@ -101,7 +103,7 @@ class _$_TabUrl extends _TabUrl {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TabUrl &&
+            other is _$TabUrlImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -111,18 +113,18 @@ class _$_TabUrl extends _TabUrl {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TabUrlCopyWith<_$_TabUrl> get copyWith =>
-      __$$_TabUrlCopyWithImpl<_$_TabUrl>(this, _$identity);
+  _$$TabUrlImplCopyWith<_$TabUrlImpl> get copyWith =>
+      __$$TabUrlImplCopyWithImpl<_$TabUrlImpl>(this, _$identity);
 }
 
 abstract class _TabUrl extends TabUrl {
-  const factory _TabUrl({required final String value}) = _$_TabUrl;
+  const factory _TabUrl({required final String value}) = _$TabUrlImpl;
   const _TabUrl._() : super._();
 
   @override
   String get value;
   @override
   @JsonKey(ignore: true)
-  _$$_TabUrlCopyWith<_$_TabUrl> get copyWith =>
+  _$$TabUrlImplCopyWith<_$TabUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
