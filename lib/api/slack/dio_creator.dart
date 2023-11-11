@@ -6,8 +6,8 @@ final dioProvider = Provider((_) => DioCreator().builder());
 class DioCreator {
   Dio builder() {
     return Dio(BaseOptions(
-      connectTimeout: 5000,
-      receiveTimeout: 3000,
+      connectTimeout: const Duration(seconds: 5),
+      receiveTimeout: const Duration(seconds: 3),
     ));
   }
 }
