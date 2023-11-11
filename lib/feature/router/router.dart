@@ -30,19 +30,19 @@ class HomeRoute extends GoRouteData {
   const HomeRoute();
 
   @override
-  Widget build(BuildContext context) => const HomeScreen();
+  Widget build(BuildContext context, GoRouterState state) => const HomeScreen();
 }
 
 class DetailRouter extends GoRouteData {
   const DetailRouter();
 
   @override
-  Widget build(BuildContext context) => const DetailScreen();
+  Widget build(BuildContext context, GoRouterState state) => const DetailScreen();
 }
 
 class InputRouter extends GoRouteData {
   const InputRouter();
 
   @override
-  Widget build(BuildContext context) => const InputScreen();
+  Widget build(BuildContext context, GoRouterState state) => const InputScreen();
 }
