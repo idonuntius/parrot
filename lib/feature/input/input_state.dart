@@ -8,7 +8,7 @@ part 'input_state.freezed.dart';
 @freezed
 class InputState with _$InputState {
   factory InputState({
-    @Default(State<SlackWebhookUrl?>.init()) State<SettingInfo> gettingSettingInfoState,
+    @Default(State<SettingInfo>.init()) State<SettingInfo> gettingSettingInfoState,
     @Default(State<void>.init()) State<void> savingUrlState,
     @Default(State<void>.init()) State<void> savingIsRichState,
     @Default('') String url,

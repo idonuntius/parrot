@@ -171,7 +171,7 @@ class __$$InputStateImplCopyWithImpl<$Res>
 
 class _$InputStateImpl extends _InputState {
   _$InputStateImpl(
-      {this.gettingSettingInfoState = const State<SlackWebhookUrl?>.init(),
+      {this.gettingSettingInfoState = const State<SettingInfo>.init(),
       this.savingUrlState = const State<void>.init(),
       this.savingIsRichState = const State<void>.init(),
       this.url = ''})
