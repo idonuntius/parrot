@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:parrot/feature/component/state.dart';
 import 'package:parrot/model/setting_info.dart';
-import 'package:parrot/model/slack_webhook_url.dart';
 
 part 'input_state.freezed.dart';
 
