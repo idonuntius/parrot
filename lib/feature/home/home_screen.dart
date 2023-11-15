@@ -56,7 +56,12 @@ class _Successful extends ConsumerWidget {
                 ),
                 const SizedBox(height: 12),
                 Button(
-                  onPressed: () => ref.read(homeControllerProvider.notifier).sendToUrl(),
+                  onPressed: () async {
+                    await ref.read(homeControllerProvider.notifier).sendToUrl();
+                    if (context.mounted) {
+                      _showSnackBar(context);
+                    }
+                  },
                   child: const Text('Send'),
                 ),
               ],
@@ -74,6 +79,15 @@ class _Successful extends ConsumerWidget {
           ),
         ),
       ],
+    );
+  }
+
+  void _showSnackBar(BuildContext context) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Sent successfully'),
+      ),
     );
   }
 }
