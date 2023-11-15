@@ -1,4 +1,4 @@
-# parrot
+# SendToSlack
 
 Chrome extension to send the currently open URL to Slack.
 
