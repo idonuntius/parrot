@@ -26,7 +26,7 @@ class _SaveSlackWebhookUrlUseCaseImpl extends SaveSlackWebhookUrlUseCase {
 
   @override
   Future<void> call(String url) async {
-    final data = {'text': 'Sent from Chrome extension parrot.'};
+    final data = {'text': 'Sent from Chrome extension SendToSlack.'};
     await _slackApi.send(SlackWebhookUrl(value: url), data);
 
     final uri = Uri.parse(url);
