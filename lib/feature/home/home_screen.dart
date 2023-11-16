@@ -17,6 +17,20 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: Consumer(builder: (context, ref, _) {
         final state = ref.watch(homeControllerProvider);
+
+        ref.listen(homeControllerProvider, (_, state) {
+          state.sendingState.maybeWhen(
+            successful: (_) {
+              _showSnackBar(context, 'Successfully sent');
+              Navigator.of(context).pop(true);
+            },
+            failed: (_) {
+              _showSnackBar(context, 'Failed to send');
+            },
+            orElse: () {},
+          );
+        });
+
         return state.gettingState.maybeWhen(
           successful: (slackWebhookUrl, tabUrl) => _Successful(
             homeState: state,
@@ -28,6 +42,15 @@ class HomeScreen extends ConsumerWidget {
           orElse: () => const LoadingIndicator(),
         );
       }),
+    );
+  }
+
+  void _showSnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
     );
   }
 }
@@ -56,12 +79,7 @@ class _Successful extends ConsumerWidget {
                 ),
                 const SizedBox(height: 12),
                 Button(
-                  onPressed: () async {
-                    await ref.read(homeControllerProvider.notifier).sendToUrl();
-                    if (context.mounted) {
-                      _showSnackBar(context);
-                    }
-                  },
+                  onPressed: () => ref.read(homeControllerProvider.notifier).sendToUrl(),
                   child: const Text('Send'),
                 ),
               ],
@@ -79,15 +97,6 @@ class _Successful extends ConsumerWidget {
           ),
         ),
       ],
-    );
-  }
-
-  void _showSnackBar(BuildContext context) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Sent successfully'),
-      ),
     );
   }
 }

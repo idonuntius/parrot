@@ -5,6 +5,7 @@ import 'package:parrot/api/chrome/chrome_api.dart';
 import 'package:parrot/api/provider.dart';
 import 'package:parrot/api/slack/slack_api.dart';
 import 'package:parrot/common/store_stream_controller.dart';
+import 'package:parrot/feature/component/state.dart';
 import 'package:parrot/feature/home/home_getting_state.dart';
 import 'package:parrot/feature/home/home_state.dart';
 import 'package:parrot/usecase/get_setting_info_usecase.dart';
@@ -45,15 +46,21 @@ class HomeController extends StateNotifier<HomeState> {
   }
 
   Future<void> sendToUrl() async {
-    final slackWebhookUrl = state.gettingState.slackWebhookUrl;
-    final tabUrl = state.gettingState.tabUrl;
-    if (slackWebhookUrl != null && tabUrl != null) {
-      await _slackApi.send(
-        slackWebhookUrl,
-        {
-          'text': tabUrl.value,
-        },
-      );
+    try {
+      final slackWebhookUrl = state.gettingState.slackWebhookUrl;
+      final tabUrl = state.gettingState.tabUrl;
+      if (slackWebhookUrl != null && tabUrl != null) {
+        state = state.copyWith(sendingState: const State<void>.inProgress());
+        await _slackApi.send(
+          slackWebhookUrl,
+          {
+            'text': tabUrl.value,
+          },
+        );
+        state = state.copyWith(sendingState: const State<void>.successful(()));
+      }
+    } on Exception catch (e) {
+      state = state.copyWith(sendingState: State<void>.failed(e));
     }
   }
 
