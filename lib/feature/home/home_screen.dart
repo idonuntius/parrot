@@ -9,11 +9,11 @@ import 'package:parrot/feature/router/router.dart';
 import 'package:parrot/model/slack_webhook_url.dart';
 import 'package:parrot/model/tab_url.dart';
 
-class HomeScreen extends ConsumerWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Consumer(builder: (context, ref, _) {
         final state = ref.watch(homeControllerProvider);
