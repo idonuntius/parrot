@@ -57,7 +57,7 @@ class HomeController extends StateNotifier<HomeState> {
             'text': tabUrl.value,
           },
         );
-        state = state.copyWith(sendingState: const State<void>.successful(()));
+        state = state.copyWith(sendingState: const State<void>.successful(null));
       }
     } on Exception catch (e) {
       state = state.copyWith(sendingState: State<void>.failed(e));
